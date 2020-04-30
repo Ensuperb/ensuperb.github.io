@@ -1,0 +1,11 @@
+<% if (is_archive() || is_tag() || is_category()) { %>
+    <button class="hide-labels">TAG 开关</button>
+    <%- partial('_partial/jquery') %>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $(".article-info").toggle(200);
+            });
+        });
+    </script>
+<% } %>

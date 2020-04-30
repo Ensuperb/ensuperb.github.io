@@ -1,0 +1,8 @@
+.vscode
+.DS_Store
+.Spotlight-V100
+.idea
+*.log
+node_modules
+_myconfig.yml
+_config.yml
