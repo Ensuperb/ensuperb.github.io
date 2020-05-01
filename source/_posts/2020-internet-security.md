@@ -236,7 +236,7 @@ hex修改一下图高
 
 ## Web1 
 
-先用御剑扫出后台，然后进入phpadmin数据库后台，在里面找到flag
+先用御剑扫出后台，然后进入phpadmin数据库后台，比赛中已经提示了数据库密码是roothashnopasswd，试出帐号为root，登录进去以后在里面翻一番，找到flag
 
 ![quzheng](web1.png)
 
