@@ -13,8 +13,8 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://imwoorin.github.io/imwoorin-blog/
-root: /imwoorin-blog/
+url: https://imwoorin.github.io/
+root: /
 # permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -106,7 +106,7 @@ theme: archer
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/imwoorin/imwoorin-blog.git
+  repo: https://github.com/imwoorin/imwoorin.github.io.git
   branch: master
   commit: '[Built] 环境大致搭建完成'
 

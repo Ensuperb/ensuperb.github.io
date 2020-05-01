@@ -3,7 +3,7 @@ layout: FlatScience From XCTF
 urlname: FlatScience-From-XCTF
 title: FlatScience
 date: 2020-04-24 22:23:58
-tags: 安全
+tags: XCTF
 top: true
 ---
 
