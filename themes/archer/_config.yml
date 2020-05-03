@@ -39,7 +39,7 @@ about:
 
 # ========== Site ========== #
 # title of the site (good for SEO)
-SEO_title: imwoorin's blog
+SEO_title: imwoorin blog
 # keywords for site (good for SEO)
 SEO_keywords:
   - hexo
@@ -47,7 +47,7 @@ SEO_keywords:
   - 'hexo-blog'
   - 'blog'
   - 'imwoorin'
-  - "imwoorin's blog"
+  - "imwoorin blog"
 
 # main title shown in header image
 main_title: imwoorinの栖息地

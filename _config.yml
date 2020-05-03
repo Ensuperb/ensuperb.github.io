@@ -133,3 +133,5 @@ jsonContent:
 
 sitemap:
   path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
