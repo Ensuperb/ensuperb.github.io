@@ -1,10 +1,10 @@
 ---
-title: "关于imwoorin"
+title: "关于imfokho"
 layout: about
 date: 2020-04-29 17:07:46
 ---
 
-话少但骚，欢迎来撩，这就是imwoorin。
+话少但骚，欢迎来撩。
 
 - 现 `黑人抬棺` 队核心成员
 - Web🐕/偶尔可以Misc

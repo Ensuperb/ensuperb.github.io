@@ -2,13 +2,13 @@
 # avatar
 avatar: /avatar/timg.jpg
 # author name
-author: imwoorin
+author: imfokho
 # signature
 signature: 一只小萌新。
 # SNS (you can custom the order)
 social:
   email: editor_i@qq.com
-  github: //github.com/imwoorin
+  github: //github.com/imfokho
   # wechat and qq should be a path of qr-code image
   wechat: 
   qq: 
@@ -39,18 +39,18 @@ about:
 
 # ========== Site ========== #
 # title of the site (good for SEO)
-SEO_title: imwoorin blog
+SEO_title: imfokho blog
 # keywords for site (good for SEO)
 SEO_keywords:
   - hexo
   - 'hexo-theme'
   - 'hexo-blog'
   - 'blog'
-  - 'imwoorin'
-  - "imwoorin blog"
+  - 'imfokho'
+  - "imfokho blog"
 
 # main title shown in header image
-main_title: imwoorinの栖息地
+main_title: imfokhoの栖息地
 # subtitle
 subtitle: 记录以前，记录现在，讨论将来。
 # site haeder image
