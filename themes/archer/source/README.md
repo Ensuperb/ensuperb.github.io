@@ -1,5 +1,5 @@
 # 关注我
-<center>
+
 https://imfokho.github.io/
 
 话少但骚，欢迎来撩
@@ -12,5 +12,4 @@ https://imfokho.github.io/
   - SQL +++
   - PHP ++
   - 其他 +
-
-</center>
+  
