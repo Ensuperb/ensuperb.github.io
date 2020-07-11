@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://imfokho.github.io/posts/lettalkaboutbuildinghexowithVPS/</loc>
+    <lastmod>2020-07-11</lastmod>
+  </url>  <url>
     <loc>https://imfokho.github.io/posts/breakpointofbuildts3server/</loc>
     <lastmod>2020-07-11</lastmod>
   </url>  <url>
@@ -17,9 +20,6 @@
     <lastmod>2020-06-19</lastmod>
   </url>  <url>
     <loc>https://imfokho.github.io/posts/13beats-From-XCTF/</loc>
-    <lastmod>2020-06-19</lastmod>
-  </url>  <url>
-    <loc>https://imfokho.github.io/posts/undefined/</loc>
     <lastmod>2020-06-19</lastmod>
   </url>  <url>
     <loc>https://imfokho.github.io/posts/new-understand-about-SSH/</loc>
