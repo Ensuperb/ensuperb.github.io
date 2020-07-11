@@ -1,5 +1,6 @@
 ---
 title: 利用Hexo与VPS搭建服务器的一些心得
+urlname: lettalkaboutbuildinghexowithVPS
 tags: 手记
 abbrlink: 13627
 date: 2019-06-08 10:40:47
