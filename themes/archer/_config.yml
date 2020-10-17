@@ -2,13 +2,13 @@
 # avatar
 avatar: /avatar/timg.jpg
 # author name
-author: IMFOKHO
+author: ENSUPERB
 # signature
 signature: 一只小萌新。
 # SNS (you can custom the order)
 social:
   email: editor_i@qq.com
-  github: //github.com/imfokho
+  github: //github.com/ensuperb
   # wechat and qq should be a path of qr-code image
   wechat: 
   qq: 
@@ -39,18 +39,18 @@ about:
 
 # ========== Site ========== #
 # title of the site (good for SEO)
-SEO_title: imfokho blog
+SEO_title: ensuperb blog
 # keywords for site (good for SEO)
 SEO_keywords:
   - hexo
   - 'hexo-theme'
   - 'hexo-blog'
   - 'blog'
-  - 'imfokho'
-  - "imfokho blog"
+  - 'ensuperb'
+  - "ensuperb blog"
 
 # main title shown in header image
-main_title: IMFOKHO的栖息地
+main_title: ENSUPERB'S BLOG
 # subtitle
 subtitle: 输给谁都可以，但是，决不能输给自己。
 # site haeder image

@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: IMFOKHO的小博客
+title: ENSUPERB's Blog
 subtitle: ''
 description: ''
 keywords:
-author: IMFOKHO
+author: ENSUPERB
 language: zh
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://imfokho.github.io/
+url: https://ensuperb.github.io/
 root: /
 # permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -106,9 +106,9 @@ theme: archer
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/imfokho/imfokho.github.io.git
+  repo: https://github.com/ensuperb/ensuperb.github.io.git
   branch: master
-  commit: '[Built] 环境大致搭建完成'
+  commit: '[Built] [+]'
 
 duoshuo_shortname: imwoorinde-xiao-bo-ke
 
