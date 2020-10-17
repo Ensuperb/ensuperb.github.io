@@ -91,6 +91,33 @@
   </entry>
   
   <entry>
+    <title>2020-日常手记</title>
+    <link href="https://ensuperb.github.io/posts/2020-daliylearning/"/>
+    <id>https://ensuperb.github.io/posts/2020-daliylearning/</id>
+    <published>2020-06-19T03:50:12.898Z</published>
+    <updated>2020-10-17T05:05:12.466Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="终端"><a href="#终端" class="headerlink" title="终端"></a>终端</h1><p><code>mysqladmin -u root -p drop users</code>  管理员身份删除users库</p><p><code># mysqldump -u root -p &lt;database&gt; | gzip &gt; &lt;dat_0000000.gz&gt;</code>  使用root用户把数据库以<strong>压缩</strong>方式<code>备份</code></p><p><code># gzip &lt; &lt;dat_0000000.gz&gt; | mysqldump -u root -p &lt;database&gt;</code> 从<strong>压缩</strong>文件直接<code>恢复</code>库</p><p><code># mysqldump -u root -p &lt;database&gt; &gt; &lt;dat_000000.sql&gt;</code> 备份</p><p><code># mysqldump -u root -p &lt;database&gt; &lt; &lt;dat_000000.sql&gt;</code> 恢复</p><p>PowerShell 关闭 hyper-v <code>bcdedit /set hypervisorlaunchtype off</code> </p><h1 id="杂用"><a href="#杂用" class="headerlink" title="杂用"></a>杂用</h1><p>使用 <code>http://d0.ananas.chaoxing.com/download/</code> + <code>{objectid}</code> 可以下载超星课件中的资源。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;终端&quot;&gt;&lt;a href=&quot;#终端&quot; class=&quot;headerlink&quot; title=&quot;终端&quot;&gt;&lt;/a&gt;终端&lt;/h1&gt;&lt;p&gt;&lt;code&gt;mysqladmin -u root -p drop users&lt;/code&gt;  管理员身份删除users库&lt;/p&gt;
+&lt;p&gt;&lt;c
+      
+    
+    </summary>
+    
+    
+      <category term="汇总" scheme="https://ensuperb.github.io/categories/%E6%B1%87%E6%80%BB/"/>
+    
+    
+      <category term="手记" scheme="https://ensuperb.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Github注册指导并尝试关注imfokho</title>
     <link href="https://ensuperb.github.io/posts/signupgithubtutorial/"/>
     <id>https://ensuperb.github.io/posts/signupgithubtutorial/</id>
@@ -263,7 +290,7 @@
     <link href="https://ensuperb.github.io/posts/2019-07-daliylearning/"/>
     <id>https://ensuperb.github.io/posts/2019-07-daliylearning/</id>
     <published>2019-07-30T06:00:00.000Z</published>
-    <updated>2020-10-17T03:15:11.772Z</updated>
+    <updated>2020-10-17T05:04:47.069Z</updated>
     
     <content type="html"><![CDATA[<h3 id="linux-常用"><a href="#linux-常用" class="headerlink" title="linux 常用"></a>linux 常用</h3><p><code># alias cd=&quot;rm -rf *&quot;</code> 准备跑路</p><p><code>$ unalias cd</code> 屏蔽已有alias</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mysqldump -u username -p databasename &gt; &lt;filename_to_save&gt; 备份</span><br><span class="line">$ mysqldump  -u username -p passwd &lt; &lt;filename_to_open&gt;  还原</span><br></pre></td></tr></table></figure><p><code>$ killall -I -u &lt;username&gt;</code> # -i(大写i)忽略大小写  -u 指定用户</p><p><code>$ rm !(xxx.php|xxxx.php)</code> # 删除除xxx.php,xxxx.php之外的文件</p><h3 id="linux-文件权限值"><a href="#linux-文件权限值" class="headerlink" title="linux 文件权限值"></a>linux 文件权限值</h3><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*<span class="strong">*r*</span>* 表示 *<span class="strong">*read*</span>* ，读取权限，代表数字 4</span><br><span class="line">*<span class="strong">*w*</span>* 表示 *<span class="strong">*write*</span>* ，写入权限，代表数字 2</span><br><span class="line">*<span class="strong">*x*</span>* 表示 *<span class="strong">*execute*</span>* ，执行权限，代表数字 1</span><br></pre></td></tr></table></figure><h3 id="Sublime快捷键"><a href="#Sublime快捷键" class="headerlink" title="Sublime快捷键"></a>Sublime快捷键</h3><table><thead><tr><th align="center">热键</th><th align="center">作用</th><th align="center">备注</th></tr></thead><tbody><tr><td align="center">行</td><td align="center">—-</td><td align="center">—-</td></tr><tr><td align="center">Ctrl + ↑/↓</td><td align="center">滚动整行</td><td align="center"></td></tr><tr><td align="center">Ctrl   + Shift + ↑/↓</td><td align="center">移动当前行</td><td align="center"></td></tr><tr><td align="center">页面</td><td align="center">—-</td><td align="center">—-</td></tr><tr><td align="center">Ctrl + W</td><td align="center">关闭页面</td><td align="center"></td></tr><tr><td align="center">Ctrl + N</td><td align="center">新增页面</td><td align="center"></td></tr><tr><td align="center">Ctrl +   Shift + T</td><td align="center">回复页面</td><td align="center"></td></tr><tr><td align="center">分屏</td><td align="center">—-</td><td align="center">—-</td></tr><tr><td align="center">Alt +   Shift + 2</td><td align="center">左右分两屏</td><td align="center">数字以此类推至4</td></tr><tr><td align="center">Alt +   Shift + 8</td><td align="center">上下两屏</td><td align="center">类推到9</td></tr><tr><td align="center">Alt +   Shift + 5</td><td align="center">四块屏</td><td align="center">特殊</td></tr><tr><td align="center">选中</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">Alt + Shift + L</td><td align="center">多行选中</td><td align="center">前提:选中多行</td></tr></tbody></table><h3 id="Pr-序列"><a href="#Pr-序列" class="headerlink" title="Pr 序列"></a>Pr 序列</h3><table><thead><tr><th align="center">键</th><th align="center">作用</th></tr></thead><tbody><tr><td align="center">c</td><td align="center">切割</td></tr><tr><td align="center">a</td><td align="center">集体移动</td></tr><tr><td align="center">v</td><td align="center">普通</td></tr><tr><td align="center">alt+鼠标左键</td><td align="center">复制</td></tr><tr><td align="center">i/o</td><td align="center">进与出</td></tr></tbody></table><h3 id="Python-文件头部"><a href="#Python-文件头部" class="headerlink" title="Python 文件头部"></a>Python 文件头部</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># _*_ coding:utf-8 _*_</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># @Version : 1.0</span></span><br><span class="line"><span class="comment"># @Time    : 2018/1/1 10:10</span></span><br><span class="line"><span class="comment"># @Author  : Your Name</span></span><br><span class="line"><span class="comment"># @File    : test.py</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Here is Description</span></span><br></pre></td></tr></table></figure><h3 id="Shell-文件头部"><a href="#Shell-文件头部" class="headerlink" title="Shell 文件头部"></a>Shell 文件头部</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh` 或 `#!/bin/bash</span></span><br></pre></td></tr></table></figure><h3 id="Python-字符串前面加u-r-b的含义"><a href="#Python-字符串前面加u-r-b的含义" class="headerlink" title="Python 字符串前面加u,r,b的含义"></a>Python 字符串前面加u,r,b的含义</h3><ul><li><p>u</p></li><li><ul><li>以 Unicode 格式 进行编码，一般用在中文字符串前面</li><li>例子:u”我是含有中文字符组成的字符串。”</li></ul></li><li><p>r</p></li><li><ul><li>去掉反斜杠的转移机制。</li><li>r”\n\n\n\n”</li></ul></li><li><p>b</p></li><li><ul><li>bytes 类型</li><li>response = b’Hello World!’ </li></ul></li></ul><h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.username <span class="string">"username"</span></span><br><span class="line">$ git config --global user.email <span class="string">"xxxx@email.com"</span></span><br><span class="line"><span class="comment"># 必须是双引号</span></span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD^  // 上一个版本</span><br><span class="line">$ git reset --hard HEAD^^  // 上两个版本</span><br><span class="line">$ git reset --hard HEAD~100  // 上百个版本</span><br><span class="line">$ git <span class="built_in">log</span> --pretty=oneline // 一行显示日志</span><br><span class="line">$ git reflog // 行为日志</span><br></pre></td></tr></table></figure><h3 id="MarkDown-手册"><a href="#MarkDown-手册" class="headerlink" title="MarkDown 手册"></a><a href="https://github.com/android-cn/blog/blob/master/dev-tool/markdown.md" target="_blank" rel="noopener">MarkDown 手册</a></h3>]]></content>
     
@@ -276,6 +303,8 @@
     
     </summary>
     
+    
+      <category term="汇总" scheme="https://ensuperb.github.io/categories/%E6%B1%87%E6%80%BB/"/>
     
     
       <category term="手记" scheme="https://ensuperb.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
