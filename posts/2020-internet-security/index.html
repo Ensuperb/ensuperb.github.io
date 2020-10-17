@@ -13,49 +13,49 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
-    <meta name="author" content="IMFOKHO">
+    <meta name="author" content="ENSUPERB">
     <meta name="renderer" content="webkit">
-    <meta name="copyright" content="IMFOKHO">
+    <meta name="copyright" content="ENSUPERB">
     
-    <meta name="keywords" content="hexo,hexo-theme,hexo-blog,blog,imfokho,imfokho blog">
+    <meta name="keywords" content="hexo,hexo-theme,hexo-blog,blog,ensuperb,ensuperb blog">
     
     <meta name="description" content="">
     <meta name="description" content="前言拿到题目挺兴奋的，因为有一点小经验，所以分析起来不算费力，有一些答案很快就找到了。这次对杂项的分析比较快速，毕竟见过类似的，取证的大家收放的速度也是可以的。 题目   计算机曾经时间是错误的，后经过自动同步调整为了正确的时间。请问该同步的时间为（）（北京时间，格式为yyyyMMddhhmm例如202004250800）     计算机系统安装时间为（）（北京时间，格式为yyyyMMddhhmm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2020-internet-security by 黑人抬棺队">
-<meta property="og:url" content="https://imfokho.github.io/posts/2020-internet-security/index.html">
-<meta property="og:site_name" content="IMFOKHO的小博客">
+<meta property="og:url" content="https://ensuperb.github.io/posts/2020-internet-security/index.html">
+<meta property="og:site_name" content="ENSUPERB&#39;s Blog">
 <meta property="og:description" content="前言拿到题目挺兴奋的，因为有一点小经验，所以分析起来不算费力，有一些答案很快就找到了。这次对杂项的分析比较快速，毕竟见过类似的，取证的大家收放的速度也是可以的。 题目   计算机曾经时间是错误的，后经过自动同步调整为了正确的时间。请问该同步的时间为（）（北京时间，格式为yyyyMMddhhmm例如202004250800）     计算机系统安装时间为（）（北京时间，格式为yyyyMMddhhmm">
 <meta property="og:locale" content="zh">
-<meta property="og:image" content="https://imfokho.github.io/posts/2020-internet-security/quzheng1_1.png">
-<meta property="og:image" content="https://imfokho.github.io/posts/2020-internet-security/quzheng1_3.png">
-<meta property="og:image" content="https://imfokho.github.io/posts/2020-internet-security/quzheng2_1.png">
-<meta property="og:image" content="https://imfokho.github.io/posts/2020-internet-security/quzheng4_1.png">
-<meta property="og:image" content="https://imfokho.github.io/posts/2020-internet-security/quzheng4_2.png">
-<meta property="og:image" content="https://imfokho.github.io/posts/2020-internet-security/quzheng6_1.png">
-<meta property="og:image" content="https://imfokho.github.io/posts/2020-internet-security/quzheng6_2.png">
-<meta property="og:image" content="https://imfokho.github.io/posts/2020-internet-security/quzheng10_1.png">
-<meta property="og:image" content="https://imfokho.github.io/posts/2020-internet-security/quzheng12_1.png">
-<meta property="og:image" content="https://imfokho.github.io/posts/2020-internet-security/quzheng12_2.png">
-<meta property="og:image" content="https://imfokho.github.io/posts/2020-internet-security/quzheng13_1.png">
-<meta property="og:image" content="https://imfokho.github.io/posts/2020-internet-security/quzheng13_2.png">
-<meta property="og:image" content="https://imfokho.github.io/posts/2020-internet-security/quzheng13_3.png">
-<meta property="og:image" content="https://imfokho.github.io/posts/2020-internet-security/quzheng13_4.png">
-<meta property="og:image" content="https://imfokho.github.io/posts/2020-internet-security/quzheng13_5.png">
-<meta property="og:image" content="https://imfokho.github.io/posts/2020-internet-security/quzheng13_6.png">
-<meta property="og:image" content="https://imfokho.github.io/posts/2020-internet-security/web1.png">
+<meta property="og:image" content="https://ensuperb.github.io/posts/2020-internet-security/quzheng1_1.png">
+<meta property="og:image" content="https://ensuperb.github.io/posts/2020-internet-security/quzheng1_3.png">
+<meta property="og:image" content="https://ensuperb.github.io/posts/2020-internet-security/quzheng2_1.png">
+<meta property="og:image" content="https://ensuperb.github.io/posts/2020-internet-security/quzheng4_1.png">
+<meta property="og:image" content="https://ensuperb.github.io/posts/2020-internet-security/quzheng4_2.png">
+<meta property="og:image" content="https://ensuperb.github.io/posts/2020-internet-security/quzheng6_1.png">
+<meta property="og:image" content="https://ensuperb.github.io/posts/2020-internet-security/quzheng6_2.png">
+<meta property="og:image" content="https://ensuperb.github.io/posts/2020-internet-security/quzheng10_1.png">
+<meta property="og:image" content="https://ensuperb.github.io/posts/2020-internet-security/quzheng12_1.png">
+<meta property="og:image" content="https://ensuperb.github.io/posts/2020-internet-security/quzheng12_2.png">
+<meta property="og:image" content="https://ensuperb.github.io/posts/2020-internet-security/quzheng13_1.png">
+<meta property="og:image" content="https://ensuperb.github.io/posts/2020-internet-security/quzheng13_2.png">
+<meta property="og:image" content="https://ensuperb.github.io/posts/2020-internet-security/quzheng13_3.png">
+<meta property="og:image" content="https://ensuperb.github.io/posts/2020-internet-security/quzheng13_4.png">
+<meta property="og:image" content="https://ensuperb.github.io/posts/2020-internet-security/quzheng13_5.png">
+<meta property="og:image" content="https://ensuperb.github.io/posts/2020-internet-security/quzheng13_6.png">
+<meta property="og:image" content="https://ensuperb.github.io/posts/2020-internet-security/web1.png">
 <meta property="article:published_time" content="2020-04-27T13:57:05.000Z">
 <meta property="article:modified_time" content="2020-06-19T03:50:12.899Z">
-<meta property="article:author" content="IMFOKHO">
+<meta property="article:author" content="ENSUPERB">
 <meta property="article:tag" content="取证">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://imfokho.github.io/posts/2020-internet-security/quzheng1_1.png">
+<meta name="twitter:image" content="https://ensuperb.github.io/posts/2020-internet-security/quzheng1_1.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
     <link rel="alternate" href="/atom.xml" title="IMFOKHO的栖息地" type="application/atom+xml">
     
-    <title>2020-internet-security by 黑人抬棺队 · imfokho blog</title>
+    <title>2020-internet-security by 黑人抬棺队 · ensuperb blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -556,10 +556,10 @@ height:50vh;
     <!-- license  -->
     
         <div class="license-wrapper">
-            <p>原文作者：<a href="https://imfokho.github.io">IMFOKHO</a>
-            <p>原文链接：<a href="https://imfokho.github.io/posts/2020-internet-security/">https://imfokho.github.io/posts/2020-internet-security/</a>
-            <p>发表日期：<a href="https://imfokho.github.io/posts/2020-internet-security/">April 27th 2020, 9:57:05 pm</a>
-            <p>更新日期：<a href="https://imfokho.github.io/posts/2020-internet-security/">June 19th 2020, 11:50:12 am</a>
+            <p>原文作者：<a href="https://ensuperb.github.io">ENSUPERB</a>
+            <p>原文链接：<a href="https://ensuperb.github.io/posts/2020-internet-security/">https://ensuperb.github.io/posts/2020-internet-security/</a>
+            <p>发表日期：<a href="https://ensuperb.github.io/posts/2020-internet-security/">April 27th 2020, 9:57:05 pm</a>
+            <p>更新日期：<a href="https://ensuperb.github.io/posts/2020-internet-security/">June 19th 2020, 11:50:12 am</a>
             <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -594,7 +594,7 @@ height:50vh;
     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
         
         var disqus_config = function () {
-        this.page.url = "https://imfokho.github.io/posts/2020-internet-security/";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.url = "https://ensuperb.github.io/posts/2020-internet-security/";  // Replace PAGE_URL with your page's canonical URL variable
         this.page.identifier = "2020-internet-security by 黑人抬棺队"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         
@@ -653,7 +653,7 @@ height:50vh;
     
         
             
-                <a href="//github.com/imfokho" class="iconfont-archer github" target="_blank" title=github></a>
+                <a href="//github.com/ensuperb" class="iconfont-archer github" target="_blank" title=github></a>
             
         
     
@@ -840,9 +840,16 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 12
+        Total : 13
         </div>
         <!-- search  -->
         
@@ -869,6 +876,11 @@ top:50vh;
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/02</span><a class="archive-post-title" href= "/posts/XCTF-WEB-M-0x01/" >XCTF-Web 进阶 0x01</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -991,7 +1003,7 @@ jsonContent:
     <script>
     var siteMeta = {
         root: "/",
-        author: "IMFOKHO"
+        author: "ENSUPERB"
     }
 </script>
     <!-- CDN failover -->
