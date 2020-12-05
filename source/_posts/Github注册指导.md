@@ -1,5 +1,5 @@
 ---
-title: Github注册指导并尝试关注imfokho
+title: Github注册指导并尝试关注ENSERUPB
 urlname: signupgithubtutorial
 tags: 杂谈
 abbrlink: 37242
@@ -28,9 +28,9 @@ date: 2020-06-14 21:50:25
 
 创建后到邮箱获得验证码，并加以验证。
 
-完成验证后，进入http://github.com/imfokho/
+完成验证后，进入[http://github.com/ENSUPERB/](http://github.com/ENSUPERB/)
 
-或者搜索用户`imfokho`
+或者搜索用户`ENSERUPB`
 
 ![](profile.png)
 
