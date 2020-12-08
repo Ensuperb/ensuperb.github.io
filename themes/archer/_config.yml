@@ -52,7 +52,7 @@ SEO_keywords:
 # main title shown in header image
 main_title: ENSUPERB'S BLOG
 # subtitle
-subtitle: 钢铁为身，而焰火为血。
+subtitle: 钢铁为身，焰火为血。
 # site haeder image
 site_header_image: '/intro/index-bg.jpg'
 # post haeder image
@@ -108,9 +108,9 @@ comment:
 # enable Busuanzi analytics
 busuanzi: true
 # fill in pv or uv
-busuanzi_pv_or_uv: 'pv'
+busuanzi_pv_or_uv: 
 # custom analytic slogan, '${count}' is the analytic number, DO NOT modify it.
-busuanzi_slug: 'PV: ${count} :)'
+busuanzi_slug: 
 # Baidu analytics
 baidu_analytics: 
 # Google analytics
