@@ -471,7 +471,7 @@ height:50vh;
 <li>把PDF转成文本后遍历文本里的所有词，加盐后使用SHA-1加密，拿加密后的值与得到的HASH值进行碰撞。</li>
 </ol>
 <p>碰撞结果 <code>ThinJerboa</code></p>
-<p><img src="Result.jpg" alt="Result"></p>
+<p><img src="/posts/FlatScience-From-XCTF/Result.jpg" alt="Result"></p>
 <p>（爬虫的写得太破就不放出来了。）</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>递归的结束条件一定要掌控好，不然既浪费时间也容易造成内存问题。数据库的查询语句要扎实才容易分析出破绽所在。最后，我这里是碰巧就在Robots.txt撞到了两登录入口，普通情况下还是扫描一下为常规操作。</p>
 <h2 id="所使用的Python库"><a href="#所使用的Python库" class="headerlink" title="所使用的Python库"></a>所使用的Python库</h2><ul>
@@ -845,15 +845,26 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 15
+        Total : 16
         </div>
         <!-- search  -->
-        
-            <div class="site-search popup-trigger">
-                <span class="iconfont-archer search-icon">&#xe627;</span>
-            </div>
         
     </div>
     
@@ -868,6 +879,11 @@ top:50vh;
     
         <li class="archive-post-item">
             <span class="archive-post-date">12/30</span><a class="archive-post-title" href= "/posts/2020-daliylearning/" >2020-日常手记</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/13</span><a class="archive-post-title" href= "/posts/XCTF-Misc-M-0x03/" >XCTF-Misc 进阶 0x03</a>
         </li>
     
     
@@ -954,13 +970,13 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="取证"><span class="iconfont-archer">&#xe606;</span>取证</span>
+        <span class="sidebar-tag-name" data-tags="手记"><span class="iconfont-archer">&#xe606;</span>手记</span>
     
-        <span class="sidebar-tag-name" data-tags="杂谈"><span class="iconfont-archer">&#xe606;</span>杂谈</span>
+        <span class="sidebar-tag-name" data-tags="取证"><span class="iconfont-archer">&#xe606;</span>取证</span>
     
         <span class="sidebar-tag-name" data-tags="XCTF"><span class="iconfont-archer">&#xe606;</span>XCTF</span>
     
-        <span class="sidebar-tag-name" data-tags="手记"><span class="iconfont-archer">&#xe606;</span>手记</span>
+        <span class="sidebar-tag-name" data-tags="杂谈"><span class="iconfont-archer">&#xe606;</span>杂谈</span>
     
         <span class="sidebar-tag-name" data-tags="翻译"><span class="iconfont-archer">&#xe606;</span>翻译</span>
     
@@ -1022,29 +1038,6 @@ jsonContent:
     </script>
     <script src="/scripts/main.js"></script>
     <!-- algolia -->
-    
-        <div class="site-search">
-  <div class="algolia-popup popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
-    <span class="popup-btn-close">
-      <i class="iconfont-archer">&#xe609;</i>
-    </span>
-  </div>
-</div>
-        <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js" defer></script>
-        <script src="/scripts/search.js" defer></script>
     
     <!-- busuanzi  -->
     

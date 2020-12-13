@@ -436,81 +436,81 @@ height:50vh;
     <article class="article-entry">
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>拿到题目挺兴奋的，因为有一点小经验，所以分析起来不算费力，有一些答案很快就找到了。这次对杂项的分析比较快速，毕竟见过类似的，取证的大家收放的速度也是可以的。</p>
 <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><ul>
-<li><input checked="" disabled="" type="checkbox"> <ol>
+<li><input checked disabled type="checkbox"> <ol>
 <li>计算机曾经时间是错误的，后经过自动同步调整为了正确的时间。请问该同步的时间为（）（北京时间，格式为yyyyMMddhhmm例如202004250800）</li>
 </ol>
 </li>
-<li><input checked="" disabled="" type="checkbox"> <ol start="2">
+<li><input checked disabled type="checkbox"> <ol start="2">
 <li>计算机系统安装时间为（）（北京时间，格式为yyyyMMddhhmm例如202004250800）</li>
 </ol>
 </li>
-<li><input disabled="" type="checkbox"> <ol start="3">
+<li><input disabled type="checkbox"> <ol start="3">
 <li>用户xiaohu的开机密码为（） </li>
 </ol>
 </li>
-<li><input checked="" disabled="" type="checkbox"> <ol start="4">
+<li><input checked disabled type="checkbox"> <ol start="4">
 <li>计算机从曾连接过多个优盘，最早连接的优盘序列号为 （）</li>
 </ol>
 </li>
-<li><input disabled="" type="checkbox"> <ol start="5">
+<li><input disabled type="checkbox"> <ol start="5">
 <li>请在优盘镜像中找出用户xiaohu壁纸图片（不考虑分辨率是否一致），该图片在优盘中的起始地址为（）（字节）</li>
 </ol>
 </li>
-<li><input checked="" disabled="" type="checkbox"> <ol start="6">
+<li><input checked disabled type="checkbox"> <ol start="6">
 <li>优盘中有个文件拷贝自计算机，拷贝该文件的用户的用户名为（）（字母全部小写）</li>
 </ol>
 </li>
-<li><input disabled="" type="checkbox"> <ol start="7">
+<li><input disabled type="checkbox"> <ol start="7">
 <li>略</li>
 </ol>
 </li>
-<li><input disabled="" type="checkbox"> <ol start="8">
+<li><input disabled type="checkbox"> <ol start="8">
 <li>现场取证人员已对一台正处于开机运行状态的Windows系统进行物理内存转储（镜像）并将其压缩为WinMemory.zip，请先解压后再进行分析。该系统可能被勒索病毒感染，通过KDBG扫描检测该系统的Build版本号，版本号为（）(如17763），并使用Volatility Framework 2.6.1版本对疑似进程remsh.exe(PID:9932)进行程序代码转储，导出该程序代码dmp文件，计算其MD5哈希值（字母全部大写）（） <del>~</del>注意：两个答案中间用_区分开；</li>
 </ol>
 </li>
-<li><input disabled="" type="checkbox"> <ol start="9">
+<li><input disabled type="checkbox"> <ol start="9">
 <li>usb数据包分析，根据附件提示解出flag，请提交flag{}内的内容；</li>
 </ol>
 </li>
-<li><input checked="" disabled="" type="checkbox"> <ol start="10">
+<li><input checked disabled type="checkbox"> <ol start="10">
 <li>内存取证，根据附件提示解出flag，请提交flag{}内的内容；</li>
 </ol>
 </li>
-<li><input checked="" disabled="" type="checkbox"> <ol start="11">
+<li><input checked disabled type="checkbox"> <ol start="11">
 <li>日志分析，根据附件提示解出flag，请提交flag{}内的内容；</li>
 </ol>
 </li>
-<li><input checked="" disabled="" type="checkbox"> <ol start="12">
+<li><input checked disabled type="checkbox"> <ol start="12">
 <li>数据包分析，根据附件提示解出flag，请提交flag{}内的内容；</li>
 </ol>
 </li>
-<li><input checked="" disabled="" type="checkbox"> <ol start="13">
+<li><input checked disabled type="checkbox"> <ol start="13">
 <li>数据恢复，根据附件提示解出flag，请提交flag{}内的内容；</li>
 </ol>
 </li>
 </ul>
 <h2 id="取证1"><a href="#取证1" class="headerlink" title="取证1"></a>取证1</h2><p>查看系统日志，找到时间临界处。比如下方的记录编号205。</p>
-<p><img src="quzheng1_1.png" alt=""></p>
+<p><img src="/posts/2020-internet-security/quzheng1_1.png" alt></p>
 <p>找到它的准确时间。<code>202004192218</code></p>
-<p><img src="quzheng1_3.png" alt="quzheng3"></p>
+<p><img src="/posts/2020-internet-security/quzheng1_3.png" alt="quzheng3"></p>
 <p>即在202004192218使用Windows Time服务同步时间</p>
 <h2 id="取证2"><a href="#取证2" class="headerlink" title="取证2"></a>取证2</h2><p>由取证一计算系统时间同步后和同步前的差值，查看系统安装时间，系统安装时间+同步前后的差值即实际系统安装时间。</p>
-<p><img src="quzheng2_1.png" alt="quzheng"></p>
+<p><img src="/posts/2020-internet-security/quzheng2_1.png" alt="quzheng"></p>
 <h2 id="取证3"><a href="#取证3" class="headerlink" title="取证3"></a>取证3</h2><p>没找到，求指教。</p>
 <h2 id="取证4"><a href="#取证4" class="headerlink" title="取证4"></a>取证4</h2><p>查看USB设备使用痕迹，如下：</p>
-<p><img src="quzheng4_1.png" alt="quzheng"></p>
+<p><img src="/posts/2020-internet-security/quzheng4_1.png" alt="quzheng"></p>
 <p>其中USB设备名称：Specific STORAGE DEVICE USB Device为U盘，查看此设备ID如下</p>
-<p><img src="quzheng4_2.png" alt="quzheng"></p>
+<p><img src="/posts/2020-internet-security/quzheng4_2.png" alt="quzheng"></p>
 <h2 id="取证6"><a href="#取证6" class="headerlink" title="取证6"></a>取证6</h2><p>文件拷贝到U盘的时间是<code>2020-04-21 10:20</code></p>
-<p><img src="quzheng6_1.png" alt="quzheng"></p>
+<p><img src="/posts/2020-internet-security/quzheng6_1.png" alt="quzheng"></p>
 <p>通过查看系统日志，在此期间用户liu登录系统并使用资源管理器（估计不是liu就是xiaohu）</p>
-<p><img src="quzheng6_2.png" alt="quzheng"></p>
+<p><img src="/posts/2020-internet-security/quzheng6_2.png" alt="quzheng"></p>
 <p>提交liu的时候正确了，那么就是liu了。</p>
 <h2 id="取证7"><a href="#取证7" class="headerlink" title="取证7"></a>取证7</h2><p>略。</p>
 <h2 id="取证8"><a href="#取证8" class="headerlink" title="取证8"></a>取证8</h2><p>硬盘空间不够了，先放弃。</p>
 <h2 id="取证9"><a href="#取证9" class="headerlink" title="取证9"></a>取证9</h2><p>金刚包，求指教。</p>
 <h2 id="取证10"><a href="#取证10" class="headerlink" title="取证10"></a>取证10</h2><p>不知道为什么，一眼看过去直觉告诉我需要<code>volatility</code>，所以没有过多的尝试。</p>
-<p><img src="quzheng10_1.png" alt="quzheng"></p>
+<p><img src="/posts/2020-internet-security/quzheng10_1.png" alt="quzheng"></p>
 <p>疑点在桌面一个叫disk.zip的压缩包（禁止套娃），因为是中文系统，逼着我去装了中文适配。</p>
 <p>把disk.zip下载下来后打开，disk.img放去还原，得到usb.pcapng，这是一个usb信号记录包，一般键盘信号常驻于第三个字节。</p>
 <p><code>tshark -r usb.pcapng -T fields -e usb.capdata &gt; usbdata.txt</code></p>
@@ -531,24 +531,24 @@ height:50vh;
 
 <p>flag应该是<code>flag{w3bvu1lisDanger}</code></p>
 <h2 id="取证12"><a href="#取证12" class="headerlink" title="取证12"></a>取证12</h2><p>下载附件，是一个数据包，用wireshark打开一下，过滤下<code>http</code></p>
-<p><img src="quzheng12_1.png" alt="quzheng"></p>
+<p><img src="/posts/2020-internet-security/quzheng12_1.png" alt="quzheng"></p>
 <p><code>POST /cmd.php</code> 看起来非常可疑，一个一个分析太累，导出再看。导出所有html对象，逐个分析，但是看完所有文件的时候，有个可疑的字符串出来了。</p>
-<p><img src="quzheng12_2.png" alt="quzheng"></p>
+<p><img src="/posts/2020-internet-security/quzheng12_2.png" alt="quzheng"></p>
 <h2 id="取证13"><a href="#取证13" class="headerlink" title="取证13"></a>取证13</h2><p>看见disk0毫不犹豫就拿去还原了。</p>
-<p><img src="quzheng13_1.png" alt="quzheng"></p>
+<p><img src="/posts/2020-internet-security/quzheng13_1.png" alt="quzheng"></p>
 <p>跟进”丢失文件”文件夹，发现这文件</p>
-<p><img src="quzheng13_2.png" alt="quzheng"></p>
+<p><img src="/posts/2020-internet-security/quzheng13_2.png" alt="quzheng"></p>
 <p>里面的内容：</p>
-<p><img src="quzheng13_3.png" alt="quzheng"></p>
+<p><img src="/posts/2020-internet-security/quzheng13_3.png" alt="quzheng"></p>
 <p>打开了p@ss_wd~ 文件</p>
-<p><img src="quzheng13_4.png" alt="quzheng"></p>
+<p><img src="/posts/2020-internet-security/quzheng13_4.png" alt="quzheng"></p>
 <p>根据提示，刚刚拿到的应该是密码。</p>
 <p>解压里面的压缩包，获得文件flag.png</p>
-<p><img src="quzheng13_5.png" alt="quzheng"></p>
+<p><img src="/posts/2020-internet-security/quzheng13_5.png" alt="quzheng"></p>
 <p>hex修改一下图高</p>
-<p><img src="quzheng13_6.png" alt="quzheng"></p>
+<p><img src="/posts/2020-internet-security/quzheng13_6.png" alt="quzheng"></p>
 <h2 id="Web1"><a href="#Web1" class="headerlink" title="Web1"></a>Web1</h2><p>先用御剑扫出后台，然后进入phpadmin数据库后台，比赛中已经提示了数据库密码是roothashnopasswd，试出帐号为root，登录进去以后在里面翻一番，找到flag</p>
-<p><img src="web1.png" alt="quzheng"></p>
+<p><img src="/posts/2020-internet-security/web1.png" alt="quzheng"></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>有些东西该记住的还是要记住的，不然忘得很快，这次和叶师傅、付师傅配合得很好，不愧是他们两个，躺着得我非常幸福。还有就是不能过于纠结一些题目，他们往往容易成为时间刺客。</p>
 <p>2020年4月27日</p>
 
@@ -906,15 +906,26 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 15
+        Total : 16
         </div>
         <!-- search  -->
-        
-            <div class="site-search popup-trigger">
-                <span class="iconfont-archer search-icon">&#xe627;</span>
-            </div>
         
     </div>
     
@@ -929,6 +940,11 @@ top:50vh;
     
         <li class="archive-post-item">
             <span class="archive-post-date">12/30</span><a class="archive-post-title" href= "/posts/2020-daliylearning/" >2020-日常手记</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/13</span><a class="archive-post-title" href= "/posts/XCTF-Misc-M-0x03/" >XCTF-Misc 进阶 0x03</a>
         </li>
     
     
@@ -1015,13 +1031,13 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="取证"><span class="iconfont-archer">&#xe606;</span>取证</span>
+        <span class="sidebar-tag-name" data-tags="手记"><span class="iconfont-archer">&#xe606;</span>手记</span>
     
-        <span class="sidebar-tag-name" data-tags="杂谈"><span class="iconfont-archer">&#xe606;</span>杂谈</span>
+        <span class="sidebar-tag-name" data-tags="取证"><span class="iconfont-archer">&#xe606;</span>取证</span>
     
         <span class="sidebar-tag-name" data-tags="XCTF"><span class="iconfont-archer">&#xe606;</span>XCTF</span>
     
-        <span class="sidebar-tag-name" data-tags="手记"><span class="iconfont-archer">&#xe606;</span>手记</span>
+        <span class="sidebar-tag-name" data-tags="杂谈"><span class="iconfont-archer">&#xe606;</span>杂谈</span>
     
         <span class="sidebar-tag-name" data-tags="翻译"><span class="iconfont-archer">&#xe606;</span>翻译</span>
     
@@ -1083,29 +1099,6 @@ jsonContent:
     </script>
     <script src="/scripts/main.js"></script>
     <!-- algolia -->
-    
-        <div class="site-search">
-  <div class="algolia-popup popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
-    <span class="popup-btn-close">
-      <i class="iconfont-archer">&#xe609;</i>
-    </span>
-  </div>
-</div>
-        <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js" defer></script>
-        <script src="/scripts/search.js" defer></script>
     
     <!-- busuanzi  -->
     

@@ -420,7 +420,7 @@ height:50vh;
             <main class="main post-page">
     <article class="article-entry">
         <p>搭建这种网站就是爱折腾,正是这种折腾让我们可以大致了解真正的搭建流程,当然每个人都会有犯错误的时候,这里笔者总结一些曾经遇到的问题,望能给需要的朋友一些帮助。</p>
-<p>大致原理图：<br><img src="theory.png" alt="totaltheory"></p>
+<p>大致原理图：<br><img src="/posts/lettalkaboutbuildinghexowithVPS/theory.png" alt="totaltheory"></p>
 <h1 id="客户端-本地"><a href="#客户端-本地" class="headerlink" title="客户端(本地)"></a>客户端(本地)</h1><hr>
 <h2 id="所需要环境"><a href="#所需要环境" class="headerlink" title="所需要环境:"></a>所需要环境:</h2><ul>
 <li>系统(笔者使用的是windows10)</li>
@@ -460,7 +460,7 @@ height:50vh;
 <p>这样,一个hook脚本就算是写好了</p>
 <h1 id="ssh免密登录以及hexo的部署-deploy"><a href="#ssh免密登录以及hexo的部署-deploy" class="headerlink" title="ssh免密登录以及hexo的部署(deploy)"></a>ssh免密登录以及hexo的部署(deploy)</h1><p>免密的作用:</p>
 <p>​    能够配合脚本更加便捷部署,非常有必要设置。</p>
-<p>原理：<br><img src="theoryofSSH.png" alt="sshtheory"></p>
+<p>原理：<br><img src="/posts/lettalkaboutbuildinghexowithVPS/theoryofSSH.png" alt="sshtheory"></p>
 <p>在VPS中的用户文件夹中建立.ssh文件夹,在这里笔者假设有一个用户叫做git,那么这个文件夹的绝对路径就是 </p>
 <p><code>$ /home/git/.ssh</code></p>
 <p>利用一下命令创建本用户的公钥私钥</p>
@@ -846,15 +846,26 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 15
+        Total : 16
         </div>
         <!-- search  -->
-        
-            <div class="site-search popup-trigger">
-                <span class="iconfont-archer search-icon">&#xe627;</span>
-            </div>
         
     </div>
     
@@ -869,6 +880,11 @@ top:50vh;
     
         <li class="archive-post-item">
             <span class="archive-post-date">12/30</span><a class="archive-post-title" href= "/posts/2020-daliylearning/" >2020-日常手记</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/13</span><a class="archive-post-title" href= "/posts/XCTF-Misc-M-0x03/" >XCTF-Misc 进阶 0x03</a>
         </li>
     
     
@@ -955,13 +971,13 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="取证"><span class="iconfont-archer">&#xe606;</span>取证</span>
+        <span class="sidebar-tag-name" data-tags="手记"><span class="iconfont-archer">&#xe606;</span>手记</span>
     
-        <span class="sidebar-tag-name" data-tags="杂谈"><span class="iconfont-archer">&#xe606;</span>杂谈</span>
+        <span class="sidebar-tag-name" data-tags="取证"><span class="iconfont-archer">&#xe606;</span>取证</span>
     
         <span class="sidebar-tag-name" data-tags="XCTF"><span class="iconfont-archer">&#xe606;</span>XCTF</span>
     
-        <span class="sidebar-tag-name" data-tags="手记"><span class="iconfont-archer">&#xe606;</span>手记</span>
+        <span class="sidebar-tag-name" data-tags="杂谈"><span class="iconfont-archer">&#xe606;</span>杂谈</span>
     
         <span class="sidebar-tag-name" data-tags="翻译"><span class="iconfont-archer">&#xe606;</span>翻译</span>
     
@@ -1023,29 +1039,6 @@ jsonContent:
     </script>
     <script src="/scripts/main.js"></script>
     <!-- algolia -->
-    
-        <div class="site-search">
-  <div class="algolia-popup popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
-    <span class="popup-btn-close">
-      <i class="iconfont-archer">&#xe609;</i>
-    </span>
-  </div>
-</div>
-        <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js" defer></script>
-        <script src="/scripts/search.js" defer></script>
     
     <!-- busuanzi  -->
     
