@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ensuperb.gdpccsa.cn/"/>
-  <updated>2020-10-17T05:07:20.314Z</updated>
+  <updated>2021-02-08T03:39:31.398Z</updated>
   <id>https://ensuperb.gdpccsa.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>歌曲推荐 トルキア - 菅野洋子</title>
+    <link href="https://ensuperb.gdpccsa.cn/posts/musicrecommendation2/"/>
+    <id>https://ensuperb.gdpccsa.cn/posts/musicrecommendation2/</id>
+    <published>2021-02-08T03:31:35.000Z</published>
+    <updated>2021-02-08T03:39:31.398Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="トルキア-菅野洋子"><a href="#トルキア-菅野洋子" class="headerlink" title="トルキア - 菅野洋子"></a>トルキア - 菅野洋子</h1><blockquote><p>空灵、气势、宗教三种元素混合的如火如荼，适当欣赏可鼓舞人心。</p></blockquote><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=589809&auto=1&height=66"></iframe><blockquote><p>吾以此曲，策马奔腾！</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;トルキア-菅野洋子&quot;&gt;&lt;a href=&quot;#トルキア-菅野洋子&quot; class=&quot;headerlink&quot; title=&quot;トルキア - 菅野洋子&quot;&gt;&lt;/a&gt;トルキア - 菅野洋子&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;空灵、气势、宗教三种元素混合的如火如荼，适当欣赏可
+      
+    
+    </summary>
+    
+    
+    
+      <category term="杂谈" scheme="https://ensuperb.gdpccsa.cn/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
   
   <entry>
     <title>2020-日常手记</title>
@@ -48,7 +73,7 @@
     <link href="https://ensuperb.gdpccsa.cn/posts/XCTF-Misc-M-0x03/"/>
     <id>https://ensuperb.gdpccsa.cn/posts/XCTF-Misc-M-0x03/</id>
     <published>2020-12-13T07:18:55.000Z</published>
-    <updated>2020-12-13T07:21:12.279Z</updated>
+    <updated>2020-12-13T07:21:40.250Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Misc-进阶-0x03"><a href="#Misc-进阶-0x03" class="headerlink" title="Misc 进阶 0x03"></a>Misc 进阶 0x03</h1><hr><h2 id="hit-the-core"><a href="#hit-the-core" class="headerlink" title="hit-the-core"></a>hit-the-core</h2><blockquote><p>知识点：字符串隐写、编程能力</p></blockquote><p>使用Strings指令扫描此文件可打印字符。</p><p>使用hexdump -C 能看到更详细的内容。</p><p>发现可疑字符串，留意大写（后来发现是随着前面大写的顺序顺下去)</p><p>从第四个字符开始，每隔5个字符取一个字符。</p><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">cvqAeqacLtqazEigwiXobxrCrtuiTzahfFreqc</span>&#123;<span class="keyword">bnjrKwgk83kgd43j85ePgb_e_rwqr7fvbmHjklo3tews_hmkogooyf0vbnk0ii87Drfgh_n </span>kiwutfb0ghk9ro987k5tfb_hjiouo087ptfcv&#125;</span><br></pre></td></tr></table></figure><h2 id="快乐游戏题"><a href="#快乐游戏题" class="headerlink" title="快乐游戏题"></a>快乐游戏题</h2><blockquote><p>知识点：EXE逆向？？？</p></blockquote><p>完了几把，赢了。</p><p>但是这真的是正确的打开方式？先放放。</p><h2 id="banmabanma"><a href="#banmabanma" class="headerlink" title="banmabanma"></a>banmabanma</h2><blockquote><p>知识点：条形码</p></blockquote><p>看到此图，联想到<strong>条形码</strong>，使用手机<code>二维码阅读器</code>扫描得到结果。</p><p>编码格式：<code>CODE_39</code></p><p>编码信息：<code>FLAG IS TENSHINE</code></p><p>当然也有<a href="https://online-barcode-reader.inliteresearch.com/" target="_blank" rel="noopener">在线识别编码的工具</a>。</p><h2 id="embarrass"><a href="#embarrass" class="headerlink" title="embarrass"></a>embarrass</h2><blockquote><p>知识点：字符串、流量分析</p></blockquote><p>Wireshark打开文件，分析半天，没什么收获。</p><p>用<code>010editor</code>打开，搜索flag得到答案。</p><h2 id="Ditf"><a href="#Ditf" class="headerlink" title="Ditf"></a>Ditf</h2><blockquote><p>知识点：图片隐写、PNG格式、流量分析</p></blockquote><p>拿到图片，使用010editor打开发现下方有rar头，使用foremost分离，压缩包有密码，起初认为是伪加密，修改后发现不是，查看原图片有没有隐藏信息。使用<code>stegsolve</code>没发现什么线索，使用<code>TweakPNG</code>检查图片的CRC。报如下错误：</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Incorrect crc <span class="keyword">for</span> IHDR chunk (is 38165a34, should be 7ebcdb1a)</span><br><span class="line">Invalid chunk<span class="built_in"> type </span>found at fhle position 989714.This may indicate garbage at the end of the file.</span><br></pre></td></tr></table></figure><p>尝试使用脚本爆破一下图片长宽：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> zlib</span><br><span class="line"><span class="keyword">import</span> binascii</span><br><span class="line"><span class="keyword">import</span> struct</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.chdir(<span class="string">r"xxx"</span>)</span><br><span class="line"><span class="comment">#读文件</span></span><br><span class="line">file = <span class="string">"00000000.png"</span></span><br><span class="line">fr = open(file,<span class="string">'rb'</span>).read()</span><br><span class="line">data = bytearray(fr[<span class="number">12</span>:<span class="number">29</span>])</span><br><span class="line">crc32key = eval(<span class="string">'0x'</span>+str(binascii.b2a_hex(fr[<span class="number">0x1d</span>:<span class="number">0x21</span>]))[<span class="number">2</span>:<span class="number">-1</span>])</span><br><span class="line"><span class="comment"># crc32key = eval(str(fr[29:33]).replace('\\x','').replace("b\'",'0x').replace("\'",''))</span></span><br><span class="line"><span class="comment">#crc32key = 0xCBD6DF8A #补上0x，copy hex value</span></span><br><span class="line"><span class="comment">#data = bytearray(b'\x49\x48\x44\x52\x00\x00\x01\xF4\x00\x00\x01\xF1\x08\x06\x00\x00\x00')  #hex下copy grep hex </span></span><br><span class="line">n = <span class="number">4095</span> <span class="comment">#理论上0xffffffff,但考虑到屏幕实际，0x0fff就差不多了</span></span><br><span class="line"><span class="keyword">for</span> w <span class="keyword">in</span> range(n):<span class="comment">#高和宽一起爆破</span></span><br><span class="line">    width = bytearray(struct.pack(<span class="string">'&gt;i'</span>, w))<span class="comment">#q为8字节，i为4字节，h为2字节</span></span><br><span class="line">    <span class="keyword">for</span> h <span class="keyword">in</span> range(n):</span><br><span class="line">        height = bytearray(struct.pack(<span class="string">'&gt;i'</span>, h))</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">4</span>):</span><br><span class="line">            data[x+<span class="number">4</span>] = width[x]</span><br><span class="line">            data[x+<span class="number">8</span>] = height[x]</span><br><span class="line">            <span class="comment">#print(data)</span></span><br><span class="line">        crc32result = zlib.crc32(data)</span><br><span class="line">        <span class="keyword">if</span> crc32result == crc32key:</span><br><span class="line">            print(width,height)</span><br><span class="line">            <span class="comment">#写文件</span></span><br><span class="line">            newpic = bytearray(fr)</span><br><span class="line">            <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">4</span>):</span><br><span class="line">                newpic[x+<span class="number">16</span>] = width[x]</span><br><span class="line">                newpic[x+<span class="number">20</span>] = height[x]</span><br><span class="line">            fw = open(file+<span class="string">'.png'</span>,<span class="string">'wb'</span>)<span class="comment">#保存副本</span></span><br><span class="line">            fw.write(newpic)</span><br><span class="line">            fw.close()</span><br></pre></td></tr></table></figure><p>得出正确的PNG高度，下方隐藏了RAR的密码。</p><p>使用wireshark打开解压的文件，过滤取HTTP报文。发现一个可疑的URL，名为<code>/kiss.png</code>，下方有疑似Base64密文，解开即可。</p><h2 id="Hear-with-your-Eyes"><a href="#Hear-with-your-Eyes" class="headerlink" title="Hear-with-your-Eyes"></a>Hear-with-your-Eyes</h2><blockquote><p>知识点：频谱图</p></blockquote><p>使用Adobe家的<code>Audition</code>打开，查看频谱可以得到看到答案。</p><p><a href="https://imgchr.com/i/re0Izj" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/13/re0Izj.png" alt="re0Izj.png"></a></p>]]></content>
     
